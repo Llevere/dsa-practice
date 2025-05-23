@@ -1,0 +1,7513 @@
+{
+  "sumOfNums": {
+    "tests": [
+      { "given": [1, 2, 3], "expected": 6 },
+      { "given": [5, 5], "expected": 10 },
+      { "given": [10, -3], "expected": 7 },
+      { "given": [-93, 41, -11, -46, -88, 9], "expected": -188 },
+      { "given": [87, -10], "expected": 77 },
+      { "given": [-89, 3, -98], "expected": -184 },
+      { "given": [-65, 81, 36, 69, -40, 25, 40, -2], "expected": 144 },
+      { "given": [30, -97], "expected": -67 },
+      { "given": [38, 72, -70, -63, 90, 87, 72], "expected": 226 },
+      { "given": [-81, 20, 84, 45, -18, 47, -85], "expected": 12 },
+      { "given": [-68, 46, 21], "expected": -1 },
+      { "given": [40, 39, 68, -67, -9, -15, 84, -78], "expected": 62 },
+      { "given": [-97, -20, -19, -23, 48, 10, -39, -85, -31], "expected": -256 },
+      { "given": [26, -94, -79, 85, 52, -48], "expected": -58 },
+      { "given": [-43, 0, -6], "expected": -49 },
+      { "given": [44, -2, -66, -17, -58, -39, -79], "expected": -217 },
+      { "given": [-75, 14, -62, 73, -98, 58, -5, -62, 22, -71], "expected": -206 },
+      { "given": [-8, 35, 46, -100, 37], "expected": 10 },
+      { "given": [-29, 14, 92, 95, 94, -75, 30, 3], "expected": 224 },
+      { "given": [44, -58, -14, 38, 85, 33, 13, 67, 52, 14], "expected": 274 },
+      { "given": [100, -65], "expected": 35 },
+      { "given": [-98, 26, 47, -49, -42, -34, -2, 17], "expected": -135 },
+      { "given": [33, -63, -69, 6], "expected": -93 },
+      { "given": [-62, 61, 1, -75, -72, 82], "expected": -65 },
+      { "given": [95, -68, -60, 35, 63, -24], "expected": 41 },
+      { "given": [-43, -41, -66, -90, -91, 18], "expected": -313 },
+      { "given": [56, 30, -41, -10, -66, 54, -74, 14], "expected": -37 },
+      { "given": [0, -71, 87, 0, -85, 25, 85, -83], "expected": -42 },
+      { "given": [57, 3, -99, -8, -48, 90], "expected": -5 },
+      { "given": [-38, 76, 62, -57, -19, 24, -53, -24, -13, -67], "expected": -109 },
+      { "given": [-54, -37, -41, -60, 83, -48, -89, 16, -75, 20], "expected": -285 },
+      { "given": [76, -22, -67, -26, -48, -75, -14, 53, -93], "expected": -216 },
+      { "given": [27, -69, 51, -51, -61, -93, 45, -47], "expected": -198 },
+      { "given": [-24, 51, -99, -60, -59, 54, 92, 92], "expected": 47 },
+      { "given": [-68, -29, -66, 86, -97, 85], "expected": -89 },
+      { "given": [45, 49, 57, 13, -27, 85, 81, 59], "expected": 362 },
+      { "given": [-93, 57, -34, 3, 54, -69, -83, -25], "expected": -190 },
+      { "given": [-71, -28, 12, 75, -91, -60, -10, -28, -72, 12], "expected": -261 },
+      { "given": [-77, -90, 31, -63, -76, 86, 45, 17, -5], "expected": -132 },
+      { "given": [-22, -54, -39, -95, 22, 69], "expected": -119 },
+      { "given": [-64, 75, -24, -49, -72, 48, -4, 70, 26], "expected": 6 },
+      { "given": [48, 16, -77, -6, -67, 41, -3], "expected": -48 },
+      { "given": [-61, -86, 48, -77, 77, 39, -46, -33, 5], "expected": -134 },
+      { "given": [-82], "expected": -82 },
+      { "given": [-19, -32, 75, -95, 40, 80, -39, -72], "expected": -62 },
+      { "given": [-27], "expected": -27 },
+      { "given": [29, 34, 13, -72, 73, -4], "expected": 73 },
+      { "given": [-71, -33, -31], "expected": -135 },
+      { "given": [-25, 68, 55, -70, 52, 45, 49], "expected": 174 },
+      { "given": [-48], "expected": -48 }
+    ]
+  },
+  "isPalindromeString": {
+    "tests": [
+      { "given": "A man, a plan, a canal: Panama", "expected": true},
+      { "given": "0P", "expected": false},
+      { "given": "race a car", "expected": false},
+      { "given": "madam", "expected": true },
+      { "given": "civic", "expected": true },
+      { "given": "deified", "expected": true },
+      { "given": "level", "expected": true },
+      { "given": "hello", "expected": false },
+      { "given": "C9NCbQYlMMlYQbCN9C", "expected": true },
+      { "given": "a1ZZ1a", "expected": true },
+      { "given": "ZLLZ", "expected": true },
+      { "given": "1vQW7zpU66Upz7WQv1", "expected": true },
+      { "given": "cddc", "expected": true },
+      { "given": "qMnSJ9zdHkkHdz9JSnMq", "expected": true },
+      { "given": "qMiYYiMq", "expected": true },
+      { "given": "YfggfY", "expected": true },
+      { "given": "JJQ1hLxxLh1QJJ", "expected": true },
+      { "given": "nJntEHrrHEtnJn", "expected": true },
+      { "given": "dGGd", "expected": true },
+      { "given": "znbnTHHTnbnz", "expected": true },
+      { "given": "KIWWIK", "expected": true },
+      { "given": "9eUvvUe9", "expected": true },
+      { "given": "dz4LjHawbVVbwaHjL4zd", "expected": true },
+      { "given": "AZV05EjDDjE50VZA", "expected": true },
+      { "given": "uBR12LL21RBu", "expected": true },
+      { "given": "EiQG6m6U44U6m6GQiE", "expected": true },
+      { "given": "NNrZLAHUUHALZrNN", "expected": true },
+      { "given": "Ytw8GL", "expected": false },
+      { "given": "J2yS2uBe8", "expected": false },
+      { "given": "Gl83L", "expected": false },
+      { "given": "9Sr1J", "expected": false },
+      { "given": "97td", "expected": false },
+      { "given": "db2AdpO", "expected": false },
+      { "given": "39gg", "expected": false },
+      { "given": "7SPKCe6J", "expected": false },
+      { "given": "5EglKJRgF", "expected": false },
+      { "given": "65KMZ0wd5o", "expected": false },
+      { "given": "CETkuXW0QQ", "expected": false },
+      { "given": "8hf73", "expected": false },
+      { "given": "ZxWYKoat", "expected": false },
+      { "given": "VFG9xxLx", "expected": false },
+      { "given": "UCycI86n", "expected": false },
+      { "given": "UIlY", "expected": false },
+      { "given": "iKf9e", "expected": false },
+      { "given": "guWuOw96c", "expected": false },
+      { "given": "r5lMfY", "expected": false },
+      { "given": "cEJMjK", "expected": false },
+      { "given": "1QsCh9c", "expected": false },
+      { "given": "nUqJO5J", "expected": false },
+      { "given": "Gnf5", "expected": false }
+    ]
+  },
+ "isPalindromeNumber": {
+    "tests": [
+      { "given": 1551, "expected": true },
+      { "given": 354453, "expected": true },
+      { "given": 728827, "expected": true },
+      { "given": 184481, "expected": true },
+      { "given": 8558, "expected": true },
+      { "given": 994499, "expected": true },
+      { "given": 101101, "expected": true },
+      { "given": 918819, "expected": true },
+      { "given": 769967, "expected": true },
+      { "given": 553355, "expected": true },
+      { "given": 5775, "expected": true },
+      { "given": 886688, "expected": true },
+      { "given": 562265, "expected": true },
+      { "given": 439934, "expected": true },
+      { "given": 281182, "expected": true },
+      { "given": 969969, "expected": true },
+      { "given": 483384, "expected": true },
+      { "given": 846648, "expected": true },
+      { "given": 211112, "expected": true },
+      { "given": 746647, "expected": true },
+      { "given": 258852, "expected": true },
+      { "given": 718817, "expected": true },
+      { "given": 535535, "expected": true },
+      { "given": 3550, "expected": false },
+      { "given": 13258, "expected": false },
+      { "given": 96860, "expected": false },
+      { "given": 98210, "expected": false },
+      { "given": 79594, "expected": false },
+      { "given": 50711, "expected": false },
+      { "given": 17420, "expected": false },
+      { "given": 84611, "expected": false },
+      { "given": 92089, "expected": false },
+      { "given": 59276, "expected": false },
+      { "given": 51052, "expected": false },
+      { "given": 86853, "expected": false },
+      { "given": 20581, "expected": false },
+      { "given": 73123, "expected": false },
+      { "given": 80176, "expected": false },
+      { "given": 45866, "expected": false },
+      { "given": 66741, "expected": false },
+      { "given": 44505, "expected": false },
+      { "given": 70976, "expected": false },
+      { "given": 40255, "expected": false },
+      { "given": 90671, "expected": false },
+      { "given": 68485, "expected": false },
+      { "given": 43776, "expected": false },
+      { "given": 40204, "expected": true },
+      { "given": 90672, "expected": false },
+      { "given": 68486, "expected": true },
+      { "given": 43771, "expected": false }
+    ]
+  },
+  "twoSum": {
+    "tests": [
+      {
+        "given": {
+          "nums": [
+            2,
+            7,
+            11,
+            15
+          ],
+          "target": 9
+        },
+        "expected": [
+          0,
+          1
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            3,
+            2,
+            4
+          ],
+          "target": 6
+        },
+        "expected": [
+          1,
+          2
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            3,
+            3
+          ],
+          "target": 6
+        },
+        "expected": [
+          0,
+          1
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            87,
+            21,
+            28,
+            23,
+            52,
+            88,
+            4,
+            89,
+            49,
+            72
+          ],
+          "target": 110
+        },
+        "expected": [
+          1,
+          7
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            65,
+            56,
+            63,
+            50,
+            21,
+            4,
+            52,
+            27,
+            6,
+            32
+          ],
+          "target": 88
+        },
+        "expected": [
+          1,
+          9
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            10,
+            82,
+            2,
+            40,
+            31,
+            43,
+            32,
+            72,
+            52,
+            58
+          ],
+          "target": 110
+        },
+        "expected": [
+          8,
+          9
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            5,
+            69,
+            80,
+            13,
+            14,
+            11,
+            65,
+            72,
+            98,
+            56
+          ],
+          "target": 85
+        },
+        "expected": [
+          0,
+          2
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            14,
+            25,
+            90,
+            53,
+            52,
+            10,
+            93,
+            72,
+            87,
+            44
+          ],
+          "target": 145
+        },
+        "expected": [
+          4,
+          6
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            27,
+            81,
+            53,
+            49,
+            68,
+            86,
+            57,
+            64,
+            89,
+            17
+          ],
+          "target": 139
+        },
+        "expected": [
+          2,
+          5
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            40,
+            3,
+            22,
+            28,
+            49,
+            37,
+            29,
+            51,
+            54,
+            41
+          ],
+          "target": 91
+        },
+        "expected": [
+          5,
+          8
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            67,
+            18,
+            6,
+            28,
+            26,
+            14,
+            80,
+            85,
+            57,
+            92
+          ],
+          "target": 71
+        },
+        "expected": [
+          5,
+          8
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            34,
+            93,
+            4,
+            60,
+            58,
+            65,
+            7,
+            14,
+            91,
+            89
+          ],
+          "target": 147
+        },
+        "expected": [
+          4,
+          9
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            94,
+            32,
+            42,
+            29,
+            73,
+            54,
+            62,
+            20,
+            95,
+            27
+          ],
+          "target": 148
+        },
+        "expected": [
+          0,
+          5
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            44,
+            25,
+            34,
+            24,
+            23,
+            71,
+            13,
+            63,
+            3,
+            68
+          ],
+          "target": 112
+        },
+        "expected": [
+          0,
+          9
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            16,
+            41,
+            7,
+            82,
+            51,
+            19,
+            46,
+            11,
+            26,
+            54
+          ],
+          "target": 128
+        },
+        "expected": [
+          3,
+          6
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            84,
+            98,
+            77,
+            24,
+            19,
+            61,
+            41,
+            48,
+            40,
+            44
+          ],
+          "target": 68
+        },
+        "expected": [
+          3,
+          9
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            28,
+            52,
+            68,
+            27,
+            19,
+            75,
+            86,
+            16,
+            34,
+            36
+          ],
+          "target": 70
+        },
+        "expected": [
+          8,
+          9
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            3,
+            90,
+            47,
+            98,
+            17,
+            24,
+            83,
+            25,
+            71,
+            21
+          ],
+          "target": 107
+        },
+        "expected": [
+          1,
+          4
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            36,
+            67,
+            19,
+            75,
+            81,
+            46,
+            68,
+            86,
+            29,
+            96
+          ],
+          "target": 113
+        },
+        "expected": [
+          1,
+          5
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            23,
+            10,
+            28,
+            90,
+            44,
+            94,
+            13,
+            71,
+            32,
+            82
+          ],
+          "target": 60
+        },
+        "expected": [
+          2,
+          8
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            14,
+            81,
+            48,
+            94,
+            51,
+            95,
+            9,
+            35,
+            16,
+            73
+          ],
+          "target": 104
+        },
+        "expected": [
+          5,
+          6
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            2,
+            57,
+            86,
+            55,
+            41,
+            54,
+            44,
+            84,
+            38,
+            43
+          ],
+          "target": 141
+        },
+        "expected": [
+          2,
+          3
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            33,
+            7,
+            34,
+            73,
+            21,
+            12,
+            27,
+            77,
+            57,
+            82
+          ],
+          "target": 155
+        },
+        "expected": [
+          3,
+          9
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            30,
+            36,
+            29,
+            52,
+            65,
+            55,
+            24,
+            11,
+            72,
+            77
+          ],
+          "target": 54
+        },
+        "expected": [
+          0,
+          6
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            64,
+            72,
+            69,
+            30,
+            9,
+            16,
+            6,
+            33,
+            77,
+            92
+          ],
+          "target": 164
+        },
+        "expected": [
+          1,
+          9
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            65,
+            76,
+            74,
+            59,
+            27,
+            20,
+            96,
+            92,
+            23,
+            60
+          ],
+          "target": 85
+        },
+        "expected": [
+          0,
+          5
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            39,
+            41,
+            80,
+            31,
+            82,
+            53,
+            40,
+            6,
+            96,
+            52
+          ],
+          "target": 70
+        },
+        "expected": [
+          0,
+          3
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            1,
+            44,
+            4,
+            36,
+            19,
+            56,
+            74,
+            38,
+            53,
+            91
+          ],
+          "target": 82
+        },
+        "expected": [
+          1,
+          7
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            85,
+            9,
+            89,
+            46,
+            4,
+            97,
+            51,
+            79,
+            90,
+            14
+          ],
+          "target": 164
+        },
+        "expected": [
+          0,
+          7
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            48,
+            60,
+            86,
+            96,
+            33,
+            12,
+            14,
+            36,
+            82,
+            95
+          ],
+          "target": 177
+        },
+        "expected": [
+          8,
+          9
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            29,
+            5,
+            83,
+            77,
+            59,
+            91,
+            19,
+            17,
+            18,
+            48
+          ],
+          "target": 96
+        },
+        "expected": [
+          1,
+          5
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            53,
+            28,
+            24,
+            59,
+            68,
+            38,
+            76,
+            74,
+            47,
+            14
+          ],
+          "target": 97
+        },
+        "expected": [
+          3,
+          5
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            13,
+            48,
+            31,
+            81,
+            23,
+            98,
+            72,
+            33,
+            5,
+            70
+          ],
+          "target": 61
+        },
+        "expected": [
+          0,
+          1
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            31,
+            22,
+            43,
+            76,
+            66,
+            95,
+            25,
+            71,
+            23,
+            54
+          ],
+          "target": 93
+        },
+        "expected": [
+          1,
+          7
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            68,
+            15,
+            57,
+            47,
+            94,
+            12,
+            99,
+            43,
+            14,
+            8
+          ],
+          "target": 61
+        },
+        "expected": [
+          3,
+          8
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            2,
+            59,
+            33,
+            60,
+            57,
+            32,
+            41,
+            68,
+            49,
+            7
+          ],
+          "target": 61
+        },
+        "expected": [
+          0,
+          1
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            15,
+            64,
+            11,
+            38,
+            88,
+            10,
+            53,
+            25,
+            98,
+            87
+          ],
+          "target": 125
+        },
+        "expected": [
+          3,
+          9
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            19,
+            52,
+            42,
+            29,
+            88,
+            76,
+            64,
+            81,
+            82,
+            6
+          ],
+          "target": 169
+        },
+        "expected": [
+          4,
+          7
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            40,
+            56,
+            16,
+            64,
+            15,
+            85,
+            66,
+            35,
+            31,
+            47
+          ],
+          "target": 56
+        },
+        "expected": [
+          0,
+          2
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            19,
+            95,
+            4,
+            7,
+            91,
+            60,
+            45,
+            78,
+            33,
+            66
+          ],
+          "target": 126
+        },
+        "expected": [
+          5,
+          9
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            17,
+            22,
+            57,
+            7,
+            6,
+            54,
+            3,
+            1,
+            50,
+            78
+          ],
+          "target": 135
+        },
+        "expected": [
+          2,
+          9
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            24,
+            82,
+            22,
+            44,
+            36,
+            48,
+            5,
+            32,
+            51,
+            18
+          ],
+          "target": 118
+        },
+        "expected": [
+          1,
+          4
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            29,
+            26,
+            87,
+            18,
+            13,
+            76,
+            66,
+            48,
+            45,
+            22
+          ],
+          "target": 31
+        },
+        "expected": [
+          3,
+          4
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            45,
+            46,
+            91,
+            97,
+            88,
+            50,
+            60,
+            93,
+            98,
+            17
+          ],
+          "target": 138
+        },
+        "expected": [
+          4,
+          5
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            73,
+            28,
+            3,
+            87,
+            61,
+            2,
+            22,
+            13,
+            72,
+            95
+          ],
+          "target": 30
+        },
+        "expected": [
+          1,
+          5
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            68,
+            16,
+            45,
+            66,
+            93,
+            65,
+            22,
+            59,
+            29,
+            19
+          ],
+          "target": 134
+        },
+        "expected": [
+          0,
+          3
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            43,
+            88,
+            78,
+            64,
+            16,
+            30,
+            86,
+            19,
+            42,
+            72
+          ],
+          "target": 174
+        },
+        "expected": [
+          1,
+          6
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            22,
+            86,
+            10,
+            1,
+            78,
+            19,
+            61,
+            11,
+            72,
+            81
+          ],
+          "target": 159
+        },
+        "expected": [
+          4,
+          9
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            41,
+            63,
+            74,
+            72,
+            52,
+            5,
+            70,
+            40,
+            87,
+            45
+          ],
+          "target": 128
+        },
+        "expected": [
+          0,
+          8
+        ]
+      },
+      {
+        "given": {
+          "nums": [
+            68,
+            96,
+            7,
+            67,
+            81,
+            10,
+            13,
+            33,
+            71,
+            91
+          ],
+          "target": 100
+        },
+        "expected": [
+          3,
+          7
+        ]
+      }
+    ]
+  },
+  "romanToInt": {
+    "tests": [
+      {
+        "given": "I",
+        "expected": 1
+      },
+      {
+        "given": "II",
+        "expected": 2
+      },
+      {
+        "given": "III",
+        "expected": 3
+      },
+      {
+        "given": "IV",
+        "expected": 4
+      },
+      {
+        "given": "V",
+        "expected": 5
+      },
+      {
+        "given": "VI",
+        "expected": 6
+      },
+      {
+        "given": "VII",
+        "expected": 7
+      },
+      {
+        "given": "VIII",
+        "expected": 8
+      },
+      {
+        "given": "IX",
+        "expected": 9
+      },
+      {
+        "given": "X",
+        "expected": 10
+      },
+      {
+        "given": "XI",
+        "expected": 11
+      },
+      {
+        "given": "XII",
+        "expected": 12
+      },
+      {
+        "given": "XIII",
+        "expected": 13
+      },
+      {
+        "given": "XIV",
+        "expected": 14
+      },
+      {
+        "given": "XV",
+        "expected": 15
+      },
+      {
+        "given": "XVI",
+        "expected": 16
+      },
+      {
+        "given": "XVII",
+        "expected": 17
+      },
+      {
+        "given": "XVIII",
+        "expected": 18
+      },
+      {
+        "given": "XIX",
+        "expected": 19
+      },
+      {
+        "given": "XX",
+        "expected": 20
+      },
+      {
+        "given": "XL",
+        "expected": 40
+      },
+      {
+        "given": "L",
+        "expected": 50
+      },
+      {
+        "given": "XC",
+        "expected": 90
+      },
+      {
+        "given": "C",
+        "expected": 100
+      },
+      {
+        "given": "CD",
+        "expected": 400
+      },
+      {
+        "given": "D",
+        "expected": 500
+      },
+      {
+        "given": "CM",
+        "expected": 900
+      },
+      {
+        "given": "M",
+        "expected": 1000
+      },
+      {
+        "given": "MMMCMXCIX",
+        "expected": 3999
+      },
+      {
+        "given": "MCMXCIV",
+        "expected": 1994
+      },
+      {
+        "given": "CXXIII",
+        "expected": 123
+      },
+      {
+        "given": "LXXVI",
+        "expected": 76
+      },
+      {
+        "given": "DCCCXC",
+        "expected": 890
+      },
+      {
+        "given": "CDXLIV",
+        "expected": 444
+      },
+      {
+        "given": "CCC",
+        "expected": 300
+      },
+      {
+        "given": "MDCLXVI",
+        "expected": 1666
+      },
+      {
+        "given": "CMXCIX",
+        "expected": 999
+      },
+      {
+        "given": "DCCC",
+        "expected": 800
+      },
+      {
+        "given": "DC",
+        "expected": 600
+      },
+      {
+        "given": "DLV",
+        "expected": 555
+      },
+      {
+        "given": "MMXVIII",
+        "expected": 2018
+      },
+      {
+        "given": "MMXX",
+        "expected": 2020
+      },
+      {
+        "given": "MD",
+        "expected": 1500
+      },
+      {
+        "given": "DXC",
+        "expected": 590
+      },
+      {
+        "given": "MCMLXXX",
+        "expected": 1980
+      },
+      {
+        "given": "CDXLIV",
+        "expected": 444
+      },
+      {
+        "given": "MMM",
+        "expected": 3000
+      },
+      {
+        "given": "MM",
+        "expected": 2000
+      }
+    ]
+  },
+  "longestCommonPrefix": {
+    "tests": [
+      {
+        "given": [
+          "ocgkx",
+          "ocbsr"
+        ],
+        "expected": "oc"
+      },
+      {
+        "given": [
+          "wkjecxyg",
+          "vzc",
+          "wkjescyil"
+        ],
+        "expected": ""
+      },
+      {
+        "given": [
+          "pwbisui",
+          "pwbifml",
+          "tpb",
+          "pwbikerc",
+          "pwbiggce"
+        ],
+        "expected": ""
+      },
+      {
+        "given": [
+          "vanandd",
+          "add",
+          "vanykhz",
+          "vanehncv"
+        ],
+        "expected": ""
+      },
+      {
+        "given": [
+          "mkitbywg",
+          "mkitbhdf",
+          "mkitbtz",
+          "htf",
+          "mkitbofwup"
+        ],
+        "expected": ""
+      },
+      {
+        "given": [
+          "gjvn",
+          "gjyvdn",
+          "gjvlmf",
+          "gjpp"
+        ],
+        "expected": "gj"
+      },
+      {
+        "given": [
+          "vijyaxm",
+          "smw",
+          "viwotz"
+        ],
+        "expected": ""
+      },
+      {
+        "given": [
+          "svsncjs",
+          "svsnmqqdk",
+          "svsnsnmg"
+        ],
+        "expected": "svsn"
+      },
+      {
+        "given": [
+          "oxgkg",
+          "oxgiid",
+          "oxgdnz",
+          "oxgbvo"
+        ],
+        "expected": "oxg"
+      },
+      {
+        "given": [
+          "edxruad",
+          "edxrusi",
+          "edxrugj",
+          "dmx",
+          "edxrumij"
+        ],
+        "expected": ""
+      },
+      {
+        "given": [
+          "ixuaixk",
+          "ixjyyr",
+          "ixkjjg",
+          "ixwyilc",
+          "ixzn"
+        ],
+        "expected": "ix"
+      },
+      {
+        "given": [
+          "btj",
+          "ywdsnwm"
+        ],
+        "expected": ""
+      },
+      {
+        "given": [
+          "oezwnwrp",
+          "oezrhrl",
+          "oezxbx",
+          "oezoj"
+        ],
+        "expected": "oez"
+      },
+      {
+        "given": [
+          "bfanglx",
+          "dua",
+          "bfaniprdh"
+        ],
+        "expected": ""
+      },
+      {
+        "given": [
+          "jpvx",
+          "jpfts",
+          "mxr",
+          "jpke",
+          "jpwgf"
+        ],
+        "expected": ""
+      },
+      {
+        "given": [
+          "evs",
+          "hasaxfds"
+        ],
+        "expected": ""
+      },
+      {
+        "given": [
+          "gjwqxxu",
+          "gjwqxiad",
+          "gjwqxiucsc",
+          "gjwqxdfsit",
+          "qok"
+        ],
+        "expected": ""
+      },
+      {
+        "given": [
+          "asrxnlcmg",
+          "asrxncjr",
+          "asrxnlmhc"
+        ],
+        "expected": "asrxn"
+      },
+      {
+        "given": [
+          "jflm",
+          "jfgn",
+          "jfndu",
+          "jfljb",
+          "jftzmzz"
+        ],
+        "expected": "jf"
+      },
+      {
+        "given": [
+          "dpmtms",
+          "dpmxxjji",
+          "dpmqc",
+          "dpmce",
+          "dpmkn"
+        ],
+        "expected": "dpm"
+      },
+      {
+        "given": [
+          "llk",
+          "jeoxbqx"
+        ],
+        "expected": ""
+      },
+      {
+        "given": [
+          "srt",
+          "nlkb",
+          "nlsvq",
+          "nlzkmzk",
+          "nlmvzs"
+        ],
+        "expected": ""
+      },
+      {
+        "given": [
+          "bdo",
+          "ifeipzh"
+        ],
+        "expected": ""
+      },
+      {
+        "given": [
+          "ukdnsndo",
+          "ukdnsvyg",
+          "nop",
+          "ukdnsbzy"
+        ],
+        "expected": ""
+      },
+      {
+        "given": [
+          "hsvamixyk",
+          "hkl",
+          "hsvaxtfe"
+        ],
+        "expected": "h"
+      },
+      {
+        "given": [
+          "uxjpesjzv",
+          "uxjpyu",
+          "uxjpkqzmw",
+          "nue"
+        ],
+        "expected": ""
+      },
+      {
+        "given": [
+          "gdwalb",
+          "gdwuhvad",
+          "ohq"
+        ],
+        "expected": ""
+      },
+      {
+        "given": [
+          "dhvwuc",
+          "dhvuxj",
+          "dhvbkc",
+          "kul"
+        ],
+        "expected": ""
+      },
+      {
+        "given": [
+          "wmauil",
+          "wmauhne",
+          "wmauowq",
+          "wmauvjsg",
+          "wmaupdtn"
+        ],
+        "expected": "wmau"
+      },
+      {
+        "given": [
+          "hopkvzebk",
+          "ecj",
+          "hopkiqy"
+        ],
+        "expected": ""
+      },
+      {
+        "given": [
+          "muk",
+          "lonaneqb",
+          "lonanyxu",
+          "lonanaei"
+        ],
+        "expected": ""
+      },
+      {
+        "given": [
+          "cnmradm",
+          "xqp"
+        ],
+        "expected": ""
+      },
+      {
+        "given": [
+          "bouhobjaq",
+          "bouhorvsa",
+          "bouhofheg"
+        ],
+        "expected": "bouho"
+      },
+      {
+        "given": [
+          "nixxygbmf",
+          "nixxyqr"
+        ],
+        "expected": "nixxy"
+      },
+      {
+        "given": [
+          "dwgco",
+          "dwgxdoje",
+          "dwglhnoq",
+          "dwgzjy",
+          "ayw"
+        ],
+        "expected": ""
+      },
+      {
+        "given": [
+          "jlqebi",
+          "jlqegltg",
+          "jlqeun"
+        ],
+        "expected": "jlqe"
+      },
+      {
+        "given": [
+          "wkfhyxwiy",
+          "wkfhywezc",
+          "gtl",
+          "wkfhyzuf"
+        ],
+        "expected": ""
+      },
+      {
+        "given": [
+          "fnzdbt",
+          "fnztoowa",
+          "wwq"
+        ],
+        "expected": ""
+      },
+      {
+        "given": [
+          "chfairnsk",
+          "ydo",
+          "chfanit",
+          "chfahjoa",
+          "chfakxmf"
+        ],
+        "expected": ""
+      },
+      {
+        "given": [
+          "dedqmjlqd",
+          "dedqsfu",
+          "yxr"
+        ],
+        "expected": ""
+      },
+      {
+        "given": [
+          "vaf",
+          "ubumlsgds",
+          "ubumrz"
+        ],
+        "expected": ""
+      },
+      {
+        "given": [
+          "cpe",
+          "qhqkwags",
+          "qhqkrcj",
+          "qhqkuqzsw"
+        ],
+        "expected": ""
+      },
+      {
+        "given": [
+          "bxuex",
+          "bxucp"
+        ],
+        "expected": "bxu"
+      },
+      {
+        "given": [
+          "cvpfjs",
+          "cvpcepe",
+          "cvpshd",
+          "eat",
+          "cvpoof"
+        ],
+        "expected": ""
+      },
+      {
+        "given": [
+          "sduhrbifsj",
+          "sduhripg"
+        ],
+        "expected": "sduhr"
+      },
+      {
+        "given": [
+          "ebjacmssae",
+          "hbs"
+        ],
+        "expected": ""
+      },
+      {
+        "given": [
+          "lwsvmlyfpd",
+          "lwsvmjwrwj",
+          "lwsvmdlbo",
+          "lwsvmywms"
+        ],
+        "expected": "lwsvm"
+      },
+      {
+        "given": [
+          "xkcwqwgq",
+          "yzj",
+          "xkcavakd"
+        ],
+        "expected": ""
+      },
+      {
+        "given": [
+          "dkn",
+          "rutlnmm"
+        ],
+        "expected": ""
+      },
+      {
+        "given": [
+          "yia",
+          "rzrhxrl"
+        ],
+        "expected": ""
+      }
+    ]
+  },
+  "validParentheses": {
+    "tests": [
+      {
+        "given": "{}(]]](}))(]{",
+        "expected": false
+      },
+      {
+        "given": "[)({]]{",
+        "expected": false
+      },
+      {
+        "given": "{){]",
+        "expected": false
+      },
+      {
+        "given": "(](){){}{)[)](][}[}",
+        "expected": false
+      },
+      {
+        "given": "{]{)))[}[}",
+        "expected": false
+      },
+      {
+        "given": "[)[)",
+        "expected": false
+      },
+      {
+        "given": "][]}[]{}[))",
+        "expected": false
+      },
+      {
+        "given": "}}([({}][[}",
+        "expected": false
+      },
+      {
+        "given": "[[)}])(}",
+        "expected": false
+      },
+      {
+        "given": "(](]{}({)}",
+        "expected": false
+      },
+      {
+        "given": "{)}()})()",
+        "expected": false
+      },
+      {
+        "given": "}([)[}[}[",
+        "expected": false
+      },
+      {
+        "given": "[)(}{}][)]{)",
+        "expected": false
+      },
+      {
+        "given": "[]{(](]",
+        "expected": false
+      },
+      {
+        "given": "]{)[}(}]}[}{)",
+        "expected": false
+      },
+      {
+        "given": "()(]}}}}{",
+        "expected": false
+      },
+      {
+        "given": "[}]](]",
+        "expected": false
+      },
+      {
+        "given": ")}](](}",
+        "expected": false
+      },
+      {
+        "given": "(]]",
+        "expected": false
+      },
+      {
+        "given": "{()}[(}[])",
+        "expected": false
+      },
+      {
+        "given": "([)]]{[)[}",
+        "expected": false
+      },
+      {
+        "given": "[({)[({}}[}]",
+        "expected": false
+      },
+      {
+        "given": "[}[)()](}{][)(}{}",
+        "expected": false
+      },
+      {
+        "given": "({}(][]){]}{)",
+        "expected": false
+      },
+      {
+        "given": "[{][)[]())",
+        "expected": false
+      },
+      {
+        "given": "[}[[){[)[]}",
+        "expected": false
+      },
+      {
+        "given": "[){){]{",
+        "expected": false
+      },
+      {
+        "given": "]{)(](](}}()",
+        "expected": false
+      },
+      {
+        "given": "(){(}",
+        "expected": false
+      },
+      {
+        "given": "(][)([])",
+        "expected": false
+      },
+      {
+        "given": "(]{{{](",
+        "expected": false
+      },
+      {
+        "given": "]{){[]{[])",
+        "expected": false
+      },
+      {
+        "given": "}[(}",
+        "expected": false
+      },
+      {
+        "given": "(](]([}[]",
+        "expected": false
+      },
+      {
+        "given": "{}{)(][((]{]",
+        "expected": false
+      },
+      {
+        "given": "((}[])[])]()",
+        "expected": false
+      },
+      {
+        "given": "{}(}())[([)(]",
+        "expected": false
+      },
+      {
+        "given": "[{){[[)]}]()",
+        "expected": false
+      },
+      {
+        "given": "}]()}((",
+        "expected": false
+      },
+      {
+        "given": "{}{(}(](}[})}",
+        "expected": false
+      },
+      {
+        "given": "(}{](](}{",
+        "expected": false
+      },
+      {
+        "given": "}{]()][)",
+        "expected": false
+      },
+      {
+        "given": "{)[}({){}",
+        "expected": false
+      },
+      {
+        "given": "{}{][(}([)[){)}}",
+        "expected": false
+      },
+      {
+        "given": ")((][]]",
+        "expected": false
+      },
+      {
+        "given": "[}{}[(](([)",
+        "expected": false
+      },
+      {
+        "given": "[}[}{",
+        "expected": false
+      },
+      {
+        "given": "(][){{])",
+        "expected": false
+      },
+      {
+        "given": "{(){}",
+        "expected": false
+      },
+      {
+        "given": "[][][){](][](",
+        "expected": false
+      }
+    ]
+  },
+  "removeDuplicatesSortedArray": {
+    "tests": [
+      {
+        "given": [
+          0,
+          9
+        ],
+        "expected": 2
+      },
+      {
+        "given": [
+          5
+        ],
+        "expected": 1
+      },
+      {
+        "given": [
+          1,
+          1,
+          2,
+          3,
+          3
+        ],
+        "expected": 3
+      },
+      {
+        "given": [
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          5,
+          5,
+          7,
+          9
+        ],
+        "expected": 5
+      },
+      {
+        "given": [
+          0,
+          0,
+          2,
+          4,
+          5,
+          7,
+          8,
+          8,
+          9
+        ],
+        "expected": 7
+      },
+      {
+        "given": [
+          0,
+          5,
+          5,
+          5,
+          10,
+          10
+        ],
+        "expected": 3
+      },
+      {
+        "given": [
+          0,
+          0,
+          0,
+          1,
+          2,
+          9,
+          10
+        ],
+        "expected": 5
+      },
+      {
+        "given": [
+          0,
+          4,
+          5,
+          7,
+          9,
+          9
+        ],
+        "expected": 5
+      },
+      {
+        "given": [
+          5,
+          8,
+          9
+        ],
+        "expected": 3
+      },
+      {
+        "given": [
+          2,
+          3,
+          4,
+          5,
+          7,
+          8
+        ],
+        "expected": 6
+      },
+      {
+        "given": [
+          1,
+          1,
+          1,
+          3,
+          7,
+          8
+        ],
+        "expected": 4
+      },
+      {
+        "given": [
+          4,
+          9,
+          10
+        ],
+        "expected": 3
+      },
+      {
+        "given": [
+          0,
+          1,
+          2,
+          4,
+          6
+        ],
+        "expected": 5
+      },
+      {
+        "given": [
+          0,
+          1,
+          3,
+          3,
+          3,
+          5,
+          6,
+          9,
+          9
+        ],
+        "expected": 6
+      },
+      {
+        "given": [],
+        "expected": 0
+      },
+      {
+        "given": [],
+        "expected": 0
+      },
+      {
+        "given": [
+          0,
+          6,
+          9
+        ],
+        "expected": 3
+      },
+      {
+        "given": [],
+        "expected": 0
+      },
+      {
+        "given": [],
+        "expected": 0
+      },
+      {
+        "given": [
+          1,
+          3,
+          8,
+          10
+        ],
+        "expected": 4
+      },
+      {
+        "given": [
+          0,
+          7,
+          9
+        ],
+        "expected": 3
+      },
+      {
+        "given": [
+          0,
+          2,
+          4,
+          5,
+          6,
+          7,
+          7,
+          7
+        ],
+        "expected": 6
+      },
+      {
+        "given": [
+          10
+        ],
+        "expected": 1
+      },
+      {
+        "given": [
+          0,
+          2,
+          2,
+          2,
+          3,
+          5
+        ],
+        "expected": 4
+      },
+      {
+        "given": [
+          1,
+          4,
+          7
+        ],
+        "expected": 3
+      },
+      {
+        "given": [
+          0,
+          1,
+          6,
+          8,
+          8,
+          10
+        ],
+        "expected": 5
+      },
+      {
+        "given": [
+          5
+        ],
+        "expected": 1
+      },
+      {
+        "given": [
+          0,
+          1,
+          3,
+          4,
+          7,
+          8,
+          9
+        ],
+        "expected": 7
+      },
+      {
+        "given": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          5,
+          5,
+          6,
+          7
+        ],
+        "expected": 5
+      },
+      {
+        "given": [
+          3,
+          3,
+          3,
+          4,
+          8,
+          10
+        ],
+        "expected": 4
+      },
+      {
+        "given": [
+          0,
+          2,
+          4,
+          4,
+          4,
+          8,
+          9,
+          10
+        ],
+        "expected": 6
+      },
+      {
+        "given": [
+          4,
+          7,
+          7,
+          7,
+          8,
+          8
+        ],
+        "expected": 3
+      },
+      {
+        "given": [
+          0,
+          1,
+          2,
+          4,
+          6,
+          6,
+          9,
+          10
+        ],
+        "expected": 7
+      },
+      {
+        "given": [
+          5
+        ],
+        "expected": 1
+      },
+      {
+        "given": [
+          4,
+          8,
+          9
+        ],
+        "expected": 3
+      },
+      {
+        "given": [],
+        "expected": 0
+      },
+      {
+        "given": [
+          1,
+          2,
+          5,
+          5,
+          6,
+          7,
+          8,
+          8,
+          8,
+          10
+        ],
+        "expected": 7
+      },
+      {
+        "given": [
+          0,
+          1,
+          2,
+          4,
+          4,
+          6,
+          7,
+          9,
+          10
+        ],
+        "expected": 8
+      },
+      {
+        "given": [
+          4,
+          6,
+          6,
+          6,
+          9,
+          10
+        ],
+        "expected": 4
+      },
+      {
+        "given": [],
+        "expected": 0
+      },
+      {
+        "given": [
+          1,
+          2,
+          9,
+          9
+        ],
+        "expected": 3
+      },
+      {
+        "given": [
+          2
+        ],
+        "expected": 1
+      },
+      {
+        "given": [
+          0,
+          1,
+          3,
+          5,
+          5,
+          7,
+          7,
+          7,
+          8,
+          9
+        ],
+        "expected": 7
+      },
+      {
+        "given": [
+          9
+        ],
+        "expected": 1
+      },
+      {
+        "given": [
+          2,
+          4
+        ],
+        "expected": 2
+      },
+      {
+        "given": [
+          1,
+          9
+        ],
+        "expected": 2
+      },
+      {
+        "given": [
+          0,
+          5,
+          5,
+          7,
+          10,
+          10,
+          10
+        ],
+        "expected": 4
+      },
+      {
+        "given": [
+          5,
+          6,
+          8,
+          9,
+          10
+        ],
+        "expected": 5
+      },
+      {
+        "given": [
+          0,
+          6
+        ],
+        "expected": 2
+      },
+      {
+        "given": [
+          4,
+          5
+        ],
+        "expected": 2
+      }
+    ]
+  },
+  "removeElement": {
+    "tests": [
+      {
+        "given": {
+          "nums": [
+            4,
+            2,
+            1,
+            2,
+            3,
+            1,
+            0
+          ],
+          "val": 1
+        },
+        "expected": 5
+      },
+      {
+        "given": {
+          "nums": [
+            3,
+            5,
+            0,
+            0
+          ],
+          "val": 5
+        },
+        "expected": 3
+      },
+      {
+        "given": {
+          "nums": [
+            3,
+            0,
+            0,
+            5,
+            3,
+            2,
+            0,
+            2,
+            5
+          ],
+          "val": 3
+        },
+        "expected": 7
+      },
+      {
+        "given": {
+          "nums": [
+            2
+          ],
+          "val": 2
+        },
+        "expected": 0
+      },
+      {
+        "given": {
+          "nums": [
+            4,
+            1,
+            3
+          ],
+          "val": 1
+        },
+        "expected": 2
+      },
+      {
+        "given": {
+          "nums": [
+            1,
+            5,
+            1,
+            3,
+            1,
+            2,
+            1
+          ],
+          "val": 0
+        },
+        "expected": 7
+      },
+      {
+        "given": {
+          "nums": [
+            3,
+            4,
+            0,
+            3,
+            0,
+            1,
+            3,
+            2,
+            2,
+            2
+          ],
+          "val": 0
+        },
+        "expected": 8
+      },
+      {
+        "given": {
+          "nums": [
+            0,
+            1,
+            3,
+            4,
+            1,
+            3
+          ],
+          "val": 3
+        },
+        "expected": 4
+      },
+      {
+        "given": {
+          "nums": [],
+          "val": 5
+        },
+        "expected": 0
+      },
+      {
+        "given": {
+          "nums": [
+            2,
+            1,
+            1,
+            0,
+            3,
+            5,
+            5
+          ],
+          "val": 4
+        },
+        "expected": 7
+      },
+      {
+        "given": {
+          "nums": [
+            0,
+            0,
+            1,
+            5,
+            1
+          ],
+          "val": 1
+        },
+        "expected": 3
+      },
+      {
+        "given": {
+          "nums": [
+            0,
+            1,
+            3,
+            5,
+            4
+          ],
+          "val": 5
+        },
+        "expected": 4
+      },
+      {
+        "given": {
+          "nums": [
+            1,
+            4,
+            0,
+            5,
+            3
+          ],
+          "val": 0
+        },
+        "expected": 4
+      },
+      {
+        "given": {
+          "nums": [
+            0,
+            5,
+            2,
+            5,
+            1,
+            4,
+            3,
+            2
+          ],
+          "val": 3
+        },
+        "expected": 7
+      },
+      {
+        "given": {
+          "nums": [
+            2,
+            0,
+            2,
+            3,
+            2,
+            3,
+            1,
+            2
+          ],
+          "val": 1
+        },
+        "expected": 7
+      },
+      {
+        "given": {
+          "nums": [
+            1,
+            5,
+            5,
+            1,
+            2,
+            1,
+            1
+          ],
+          "val": 4
+        },
+        "expected": 7
+      },
+      {
+        "given": {
+          "nums": [
+            2
+          ],
+          "val": 0
+        },
+        "expected": 1
+      },
+      {
+        "given": {
+          "nums": [
+            0
+          ],
+          "val": 1
+        },
+        "expected": 1
+      },
+      {
+        "given": {
+          "nums": [
+            5,
+            0
+          ],
+          "val": 3
+        },
+        "expected": 2
+      },
+      {
+        "given": {
+          "nums": [
+            2,
+            4,
+            0,
+            0,
+            5,
+            2,
+            1,
+            3
+          ],
+          "val": 4
+        },
+        "expected": 7
+      },
+      {
+        "given": {
+          "nums": [
+            2,
+            2,
+            1,
+            1,
+            5,
+            0
+          ],
+          "val": 2
+        },
+        "expected": 4
+      },
+      {
+        "given": {
+          "nums": [
+            5,
+            5,
+            3,
+            0,
+            0,
+            5
+          ],
+          "val": 3
+        },
+        "expected": 5
+      },
+      {
+        "given": {
+          "nums": [
+            4,
+            1,
+            2,
+            4,
+            1
+          ],
+          "val": 1
+        },
+        "expected": 3
+      },
+      {
+        "given": {
+          "nums": [
+            1,
+            5,
+            1,
+            5,
+            2,
+            0,
+            2,
+            5,
+            1
+          ],
+          "val": 4
+        },
+        "expected": 9
+      },
+      {
+        "given": {
+          "nums": [
+            1
+          ],
+          "val": 5
+        },
+        "expected": 1
+      },
+      {
+        "given": {
+          "nums": [
+            4,
+            1
+          ],
+          "val": 0
+        },
+        "expected": 2
+      },
+      {
+        "given": {
+          "nums": [],
+          "val": 0
+        },
+        "expected": 0
+      },
+      {
+        "given": {
+          "nums": [
+            4,
+            0,
+            0,
+            3,
+            4,
+            2
+          ],
+          "val": 0
+        },
+        "expected": 4
+      },
+      {
+        "given": {
+          "nums": [
+            1,
+            5,
+            0,
+            4,
+            1
+          ],
+          "val": 0
+        },
+        "expected": 4
+      },
+      {
+        "given": {
+          "nums": [
+            5,
+            0,
+            2,
+            0,
+            1,
+            3,
+            1,
+            5,
+            0
+          ],
+          "val": 2
+        },
+        "expected": 8
+      },
+      {
+        "given": {
+          "nums": [
+            3,
+            0,
+            5,
+            2,
+            2
+          ],
+          "val": 1
+        },
+        "expected": 5
+      },
+      {
+        "given": {
+          "nums": [
+            2,
+            0,
+            5,
+            3,
+            0,
+            5,
+            0,
+            3,
+            3
+          ],
+          "val": 1
+        },
+        "expected": 9
+      },
+      {
+        "given": {
+          "nums": [
+            4,
+            5,
+            1,
+            2,
+            4
+          ],
+          "val": 0
+        },
+        "expected": 5
+      },
+      {
+        "given": {
+          "nums": [
+            2,
+            2,
+            5,
+            4,
+            1,
+            5
+          ],
+          "val": 3
+        },
+        "expected": 6
+      },
+      {
+        "given": {
+          "nums": [
+            0,
+            3,
+            3
+          ],
+          "val": 3
+        },
+        "expected": 1
+      },
+      {
+        "given": {
+          "nums": [],
+          "val": 5
+        },
+        "expected": 0
+      },
+      {
+        "given": {
+          "nums": [
+            1,
+            2,
+            0,
+            5,
+            3,
+            0,
+            0
+          ],
+          "val": 1
+        },
+        "expected": 6
+      },
+      {
+        "given": {
+          "nums": [
+            5,
+            2,
+            1,
+            0,
+            4
+          ],
+          "val": 4
+        },
+        "expected": 4
+      },
+      {
+        "given": {
+          "nums": [
+            5,
+            0,
+            5,
+            5,
+            2,
+            2,
+            5
+          ],
+          "val": 1
+        },
+        "expected": 7
+      },
+      {
+        "given": {
+          "nums": [
+            0,
+            2,
+            0,
+            5,
+            1,
+            3,
+            3
+          ],
+          "val": 1
+        },
+        "expected": 6
+      },
+      {
+        "given": {
+          "nums": [
+            3,
+            2,
+            5,
+            1,
+            3,
+            2,
+            5
+          ],
+          "val": 4
+        },
+        "expected": 7
+      },
+      {
+        "given": {
+          "nums": [
+            1,
+            5,
+            4
+          ],
+          "val": 5
+        },
+        "expected": 2
+      },
+      {
+        "given": {
+          "nums": [
+            0,
+            1
+          ],
+          "val": 1
+        },
+        "expected": 1
+      },
+      {
+        "given": {
+          "nums": [
+            0,
+            3,
+            2
+          ],
+          "val": 1
+        },
+        "expected": 3
+      },
+      {
+        "given": {
+          "nums": [
+            2,
+            1
+          ],
+          "val": 3
+        },
+        "expected": 2
+      },
+      {
+        "given": {
+          "nums": [
+            5,
+            4,
+            1,
+            0,
+            1,
+            4,
+            4
+          ],
+          "val": 1
+        },
+        "expected": 5
+      },
+      {
+        "given": {
+          "nums": [
+            2,
+            3,
+            4,
+            2,
+            5,
+            5
+          ],
+          "val": 5
+        },
+        "expected": 4
+      },
+      {
+        "given": {
+          "nums": [
+            3,
+            2,
+            2,
+            2,
+            0
+          ],
+          "val": 0
+        },
+        "expected": 4
+      },
+      {
+        "given": {
+          "nums": [
+            4,
+            2
+          ],
+          "val": 5
+        },
+        "expected": 2
+      },
+      {
+        "given": {
+          "nums": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "val": 2
+        },
+        "expected": 3
+      }
+    ]
+  },
+  "strStr": {
+    "tests": [
+      {
+        "given": {
+          "haystack": "veutn",
+          "needle": "u"
+        },
+        "expected": 2
+      },
+      {
+        "given": {
+          "haystack": "pafxb",
+          "needle": "hsa"
+        },
+        "expected": -1
+      },
+      {
+        "given": {
+          "haystack": "oatlkdqxe",
+          "needle": "yf"
+        },
+        "expected": -1
+      },
+      {
+        "given": {
+          "haystack": "mqu",
+          "needle": "u"
+        },
+        "expected": 2
+      },
+      {
+        "given": {
+          "haystack": "zvbyfi",
+          "needle": "pmc"
+        },
+        "expected": -1
+      },
+      {
+        "given": {
+          "haystack": "igecf",
+          "needle": "g"
+        },
+        "expected": 1
+      },
+      {
+        "given": {
+          "haystack": "onmsboi",
+          "needle": "s"
+        },
+        "expected": 3
+      },
+      {
+        "given": {
+          "haystack": "gxntqe",
+          "needle": "tqe"
+        },
+        "expected": 3
+      },
+      {
+        "given": {
+          "haystack": "prbwnmop",
+          "needle": "wn"
+        },
+        "expected": 3
+      },
+      {
+        "given": {
+          "haystack": "opunaih",
+          "needle": "qh"
+        },
+        "expected": -1
+      },
+      {
+        "given": {
+          "haystack": "tihlcqjm",
+          "needle": "sc"
+        },
+        "expected": -1
+      },
+      {
+        "given": {
+          "haystack": "tnlkqmg",
+          "needle": "esc"
+        },
+        "expected": -1
+      },
+      {
+        "given": {
+          "haystack": "ajcykng",
+          "needle": "p"
+        },
+        "expected": -1
+      },
+      {
+        "given": {
+          "haystack": "iykbcsvwfz",
+          "needle": "aq"
+        },
+        "expected": -1
+      },
+      {
+        "given": {
+          "haystack": "nbtvwul",
+          "needle": "mq"
+        },
+        "expected": -1
+      },
+      {
+        "given": {
+          "haystack": "mntvehp",
+          "needle": "veh"
+        },
+        "expected": 3
+      },
+      {
+        "given": {
+          "haystack": "cezug",
+          "needle": "nqt"
+        },
+        "expected": -1
+      },
+      {
+        "given": {
+          "haystack": "myqt",
+          "needle": "myq"
+        },
+        "expected": 0
+      },
+      {
+        "given": {
+          "haystack": "lgf",
+          "needle": "gf"
+        },
+        "expected": 1
+      },
+      {
+        "given": {
+          "haystack": "layuwopvq",
+          "needle": "jus"
+        },
+        "expected": -1
+      },
+      {
+        "given": {
+          "haystack": "wijhckaduf",
+          "needle": "r"
+        },
+        "expected": -1
+      },
+      {
+        "given": {
+          "haystack": "sphmjvlfc",
+          "needle": "t"
+        },
+        "expected": -1
+      },
+      {
+        "given": {
+          "haystack": "szawu",
+          "needle": "zaw"
+        },
+        "expected": 1
+      },
+      {
+        "given": {
+          "haystack": "giolx",
+          "needle": "p"
+        },
+        "expected": -1
+      },
+      {
+        "given": {
+          "haystack": "tefbup",
+          "needle": "x"
+        },
+        "expected": -1
+      },
+      {
+        "given": {
+          "haystack": "axwli",
+          "needle": "wli"
+        },
+        "expected": 2
+      },
+      {
+        "given": {
+          "haystack": "aohivkqtl",
+          "needle": "e"
+        },
+        "expected": -1
+      },
+      {
+        "given": {
+          "haystack": "qhkvur",
+          "needle": "tv"
+        },
+        "expected": -1
+      },
+      {
+        "given": {
+          "haystack": "rcvuxzk",
+          "needle": "cvu"
+        },
+        "expected": 1
+      },
+      {
+        "given": {
+          "haystack": "zwavoh",
+          "needle": "a"
+        },
+        "expected": 2
+      },
+      {
+        "given": {
+          "haystack": "dzwmfneb",
+          "needle": "lnh"
+        },
+        "expected": -1
+      },
+      {
+        "given": {
+          "haystack": "mgo",
+          "needle": "mg"
+        },
+        "expected": 0
+      },
+      {
+        "given": {
+          "haystack": "ztvmxciofj",
+          "needle": "h"
+        },
+        "expected": -1
+      },
+      {
+        "given": {
+          "haystack": "bajnlrm",
+          "needle": "ac"
+        },
+        "expected": -1
+      },
+      {
+        "given": {
+          "haystack": "hxsbef",
+          "needle": "hxs"
+        },
+        "expected": 0
+      },
+      {
+        "given": {
+          "haystack": "iqzvge",
+          "needle": "zn"
+        },
+        "expected": -1
+      },
+      {
+        "given": {
+          "haystack": "oamflnrz",
+          "needle": "t"
+        },
+        "expected": -1
+      },
+      {
+        "given": {
+          "haystack": "x",
+          "needle": "x"
+        },
+        "expected": 0
+      },
+      {
+        "given": {
+          "haystack": "jbumvac",
+          "needle": "ysv"
+        },
+        "expected": -1
+      },
+      {
+        "given": {
+          "haystack": "oumzsarq",
+          "needle": "oln"
+        },
+        "expected": -1
+      },
+      {
+        "given": {
+          "haystack": "jxcxazq",
+          "needle": "cxa"
+        },
+        "expected": 2
+      },
+      {
+        "given": {
+          "haystack": "jmejzjep",
+          "needle": "ejz"
+        },
+        "expected": 2
+      },
+      {
+        "given": {
+          "haystack": "kbntqurx",
+          "needle": "qs"
+        },
+        "expected": -1
+      },
+      {
+        "given": {
+          "haystack": "kozwl",
+          "needle": "koz"
+        },
+        "expected": 0
+      },
+      {
+        "given": {
+          "haystack": "xspwuoety",
+          "needle": "zfs"
+        },
+        "expected": -1
+      },
+      {
+        "given": {
+          "haystack": "ixlfbqvycj",
+          "needle": "iw"
+        },
+        "expected": -1
+      },
+      {
+        "given": {
+          "haystack": "jkbwhgqcpt",
+          "needle": "igw"
+        },
+        "expected": -1
+      },
+      {
+        "given": {
+          "haystack": "latgo",
+          "needle": "g"
+        },
+        "expected": 3
+      },
+      {
+        "given": {
+          "haystack": "zhdimgrp",
+          "needle": "ear"
+        },
+        "expected": -1
+      },
+      {
+        "given": {
+          "haystack": "wfelaq",
+          "needle": "r"
+        },
+        "expected": -1
+      }
+    ]
+  },
+  "searchInsert": {
+    "tests": [
+      {
+        "given": {
+          "nums": [
+            20,
+            25,
+            26,
+            32,
+            33
+          ],
+          "target": 13
+        },
+        "expected": 0
+      },
+      {
+        "given": {
+          "nums": [
+            5,
+            12,
+            16,
+            21,
+            31,
+            43,
+            44,
+            47
+          ],
+          "target": 12
+        },
+        "expected": 1
+      },
+      {
+        "given": {
+          "nums": [
+            15,
+            31,
+            33,
+            42,
+            44
+          ],
+          "target": 6
+        },
+        "expected": 0
+      },
+      {
+        "given": {
+          "nums": [
+            0,
+            1,
+            21,
+            25,
+            27,
+            29,
+            46
+          ],
+          "target": 14
+        },
+        "expected": 2
+      },
+      {
+        "given": {
+          "nums": [
+            3,
+            6,
+            10,
+            16,
+            25,
+            26,
+            42,
+            48
+          ],
+          "target": 32
+        },
+        "expected": 6
+      },
+      {
+        "given": {
+          "nums": [
+            21,
+            29,
+            43,
+            44
+          ],
+          "target": 3
+        },
+        "expected": 0
+      },
+      {
+        "given": {
+          "nums": [
+            5,
+            18,
+            23,
+            38,
+            39
+          ],
+          "target": 5
+        },
+        "expected": 0
+      },
+      {
+        "given": {
+          "nums": [
+            1,
+            5,
+            7,
+            8,
+            12,
+            16,
+            23,
+            42
+          ],
+          "target": 38
+        },
+        "expected": 7
+      },
+      {
+        "given": {
+          "nums": [
+            2,
+            16,
+            45
+          ],
+          "target": 22
+        },
+        "expected": 2
+      },
+      {
+        "given": {
+          "nums": [
+            1,
+            2,
+            14,
+            20,
+            22,
+            23,
+            38,
+            45
+          ],
+          "target": 1
+        },
+        "expected": 0
+      },
+      {
+        "given": {
+          "nums": [
+            1,
+            28,
+            35
+          ],
+          "target": 8
+        },
+        "expected": 1
+      },
+      {
+        "given": {
+          "nums": [
+            3,
+            5,
+            14,
+            15,
+            40
+          ],
+          "target": 20
+        },
+        "expected": 4
+      },
+      {
+        "given": {
+          "nums": [
+            12,
+            18,
+            20,
+            39
+          ],
+          "target": 17
+        },
+        "expected": 1
+      },
+      {
+        "given": {
+          "nums": [
+            1,
+            3,
+            11,
+            19,
+            26,
+            38
+          ],
+          "target": 37
+        },
+        "expected": 5
+      },
+      {
+        "given": {
+          "nums": [
+            8,
+            11,
+            13,
+            21,
+            28,
+            31,
+            41
+          ],
+          "target": 22
+        },
+        "expected": 4
+      },
+      {
+        "given": {
+          "nums": [
+            1,
+            27,
+            28,
+            35,
+            36
+          ],
+          "target": 30
+        },
+        "expected": 3
+      },
+      {
+        "given": {
+          "nums": [
+            8,
+            12,
+            18,
+            24,
+            45
+          ],
+          "target": 4
+        },
+        "expected": 0
+      },
+      {
+        "given": {
+          "nums": [
+            5,
+            29,
+            33,
+            38,
+            39,
+            49
+          ],
+          "target": 42
+        },
+        "expected": 5
+      },
+      {
+        "given": {
+          "nums": [
+            9,
+            16,
+            17,
+            21,
+            31,
+            36,
+            39,
+            47
+          ],
+          "target": 24
+        },
+        "expected": 4
+      },
+      {
+        "given": {
+          "nums": [
+            11,
+            33,
+            35,
+            44,
+            45,
+            48
+          ],
+          "target": 15
+        },
+        "expected": 1
+      },
+      {
+        "given": {
+          "nums": [
+            13,
+            30,
+            35,
+            41,
+            42,
+            47,
+            48,
+            49
+          ],
+          "target": 31
+        },
+        "expected": 2
+      },
+      {
+        "given": {
+          "nums": [
+            23,
+            26,
+            35
+          ],
+          "target": 12
+        },
+        "expected": 0
+      },
+      {
+        "given": {
+          "nums": [
+            3,
+            13,
+            14
+          ],
+          "target": 24
+        },
+        "expected": 3
+      },
+      {
+        "given": {
+          "nums": [
+            6,
+            10,
+            17,
+            19,
+            34,
+            40
+          ],
+          "target": 29
+        },
+        "expected": 4
+      },
+      {
+        "given": {
+          "nums": [
+            6,
+            22,
+            27,
+            32,
+            34,
+            40,
+            41
+          ],
+          "target": 13
+        },
+        "expected": 1
+      },
+      {
+        "given": {
+          "nums": [
+            13,
+            21,
+            29,
+            35,
+            36
+          ],
+          "target": 28
+        },
+        "expected": 2
+      },
+      {
+        "given": {
+          "nums": [
+            11,
+            39,
+            40,
+            47
+          ],
+          "target": 46
+        },
+        "expected": 3
+      },
+      {
+        "given": {
+          "nums": [
+            14,
+            16,
+            17,
+            21,
+            26,
+            29,
+            37,
+            42
+          ],
+          "target": 3
+        },
+        "expected": 0
+      },
+      {
+        "given": {
+          "nums": [
+            4,
+            5,
+            9,
+            10,
+            22
+          ],
+          "target": 29
+        },
+        "expected": 5
+      },
+      {
+        "given": {
+          "nums": [
+            1,
+            5,
+            7,
+            18,
+            27,
+            41,
+            43
+          ],
+          "target": 43
+        },
+        "expected": 6
+      },
+      {
+        "given": {
+          "nums": [
+            1,
+            7,
+            14,
+            22,
+            31,
+            35,
+            48
+          ],
+          "target": 27
+        },
+        "expected": 4
+      },
+      {
+        "given": {
+          "nums": [
+            1,
+            2,
+            12,
+            15,
+            25,
+            37,
+            43
+          ],
+          "target": 13
+        },
+        "expected": 3
+      },
+      {
+        "given": {
+          "nums": [
+            9,
+            19,
+            31,
+            43
+          ],
+          "target": 11
+        },
+        "expected": 1
+      },
+      {
+        "given": {
+          "nums": [
+            4,
+            6,
+            25,
+            27,
+            28,
+            32,
+            35,
+            39
+          ],
+          "target": 39
+        },
+        "expected": 7
+      },
+      {
+        "given": {
+          "nums": [
+            11,
+            24,
+            32,
+            35,
+            48
+          ],
+          "target": 33
+        },
+        "expected": 3
+      },
+      {
+        "given": {
+          "nums": [
+            10,
+            16,
+            29,
+            33,
+            45,
+            48
+          ],
+          "target": 36
+        },
+        "expected": 4
+      },
+      {
+        "given": {
+          "nums": [
+            8,
+            20,
+            24,
+            40
+          ],
+          "target": 14
+        },
+        "expected": 1
+      },
+      {
+        "given": {
+          "nums": [
+            3,
+            13,
+            14,
+            35,
+            39,
+            44,
+            46,
+            49
+          ],
+          "target": 49
+        },
+        "expected": 7
+      },
+      {
+        "given": {
+          "nums": [
+            19,
+            38,
+            40
+          ],
+          "target": 19
+        },
+        "expected": 0
+      },
+      {
+        "given": {
+          "nums": [
+            4,
+            5,
+            10,
+            17,
+            21,
+            34,
+            38,
+            44
+          ],
+          "target": 23
+        },
+        "expected": 5
+      },
+      {
+        "given": {
+          "nums": [
+            17,
+            28,
+            31,
+            32,
+            33,
+            47
+          ],
+          "target": 33
+        },
+        "expected": 4
+      },
+      {
+        "given": {
+          "nums": [
+            12,
+            23,
+            30,
+            49
+          ],
+          "target": 7
+        },
+        "expected": 0
+      },
+      {
+        "given": {
+          "nums": [
+            2,
+            14,
+            16,
+            42,
+            48
+          ],
+          "target": 39
+        },
+        "expected": 3
+      },
+      {
+        "given": {
+          "nums": [
+            13,
+            16,
+            19,
+            25,
+            35,
+            36,
+            39
+          ],
+          "target": 33
+        },
+        "expected": 4
+      },
+      {
+        "given": {
+          "nums": [
+            7,
+            11,
+            14,
+            32,
+            37,
+            38,
+            39
+          ],
+          "target": 46
+        },
+        "expected": 7
+      },
+      {
+        "given": {
+          "nums": [
+            14,
+            17,
+            25,
+            34,
+            38,
+            40,
+            44,
+            49
+          ],
+          "target": 48
+        },
+        "expected": 7
+      },
+      {
+        "given": {
+          "nums": [
+            5,
+            6,
+            24,
+            35
+          ],
+          "target": 13
+        },
+        "expected": 2
+      },
+      {
+        "given": {
+          "nums": [
+            0,
+            2,
+            7,
+            25,
+            35,
+            45
+          ],
+          "target": 30
+        },
+        "expected": 4
+      },
+      {
+        "given": {
+          "nums": [
+            20,
+            27,
+            32,
+            38,
+            39,
+            40
+          ],
+          "target": 45
+        },
+        "expected": 6
+      },
+      {
+        "given": {
+          "nums": [
+            1,
+            3,
+            11,
+            20,
+            25,
+            32,
+            45
+          ],
+          "target": 26
+        },
+        "expected": 5
+      }
+    ]
+  },
+  "lengthOfLastWord": {
+    "tests": [
+      {
+        "given": "xkvleu xlpd nuaf n",
+        "expected": 1
+      },
+      {
+        "given": "fpgdx caer l oq vgqozp ur",
+        "expected": 2
+      },
+      {
+        "given": "m cqzupe co",
+        "expected": 2
+      },
+      {
+        "given": "pmts doz v lz",
+        "expected": 2
+      },
+      {
+        "given": "lvjbok i he",
+        "expected": 2
+      },
+      {
+        "given": "x hint st",
+        "expected": 2
+      },
+      {
+        "given": "trq c u j",
+        "expected": 1
+      },
+      {
+        "given": "j hukxpb gnpywo cj",
+        "expected": 2
+      },
+      {
+        "given": "a bstdj",
+        "expected": 5
+      },
+      {
+        "given": "hrpc kbevm lf gaz fl",
+        "expected": 2
+      },
+      {
+        "given": "g pz rozg ji zt pogr",
+        "expected": 4
+      },
+      {
+        "given": "vszp gtpykb gb v",
+        "expected": 1
+      },
+      {
+        "given": "t fza r wzocvi",
+        "expected": 6
+      },
+      {
+        "given": "stik s qjhkt ks txd jv",
+        "expected": 2
+      },
+      {
+        "given": "aopgte ehyxli ipqyve",
+        "expected": 6
+      },
+      {
+        "given": "kf kyfc thwaxp d vgsy evxo",
+        "expected": 4
+      },
+      {
+        "given": "acvgsq t lctgr ey uvc jo",
+        "expected": 2
+      },
+      {
+        "given": "fcdj yzqsek",
+        "expected": 6
+      },
+      {
+        "given": "tvswq oqx dcseyb rl ntrqvx le",
+        "expected": 2
+      },
+      {
+        "given": "zbj nw jbicfk",
+        "expected": 6
+      },
+      {
+        "given": "ifsr tg wiltpy",
+        "expected": 6
+      },
+      {
+        "given": "q i peqrw d w",
+        "expected": 1
+      },
+      {
+        "given": "shu trh wxojc ugbanh cptfo",
+        "expected": 5
+      },
+      {
+        "given": "r tb d ale",
+        "expected": 3
+      },
+      {
+        "given": "um cq mciuw ey setnvh nxdyrw",
+        "expected": 6
+      },
+      {
+        "given": "mel jd qlvscf pdh",
+        "expected": 3
+      },
+      {
+        "given": "kwz v chzp hqascd",
+        "expected": 6
+      },
+      {
+        "given": "xhtvoe lcwmp s yjm iydkr iql",
+        "expected": 3
+      },
+      {
+        "given": "jyc zdy rjzxmq",
+        "expected": 6
+      },
+      {
+        "given": "bfsyw vpbwc",
+        "expected": 5
+      },
+      {
+        "given": "gq jnavqs",
+        "expected": 6
+      },
+      {
+        "given": "iguhjp lrse rtnwh pct kxnp",
+        "expected": 4
+      },
+      {
+        "given": "xy zwdhl mewqs",
+        "expected": 5
+      },
+      {
+        "given": "nmfjvh u qaf v nrc",
+        "expected": 3
+      },
+      {
+        "given": "zecrs yrlom pifbhy xaqc wnkm",
+        "expected": 4
+      },
+      {
+        "given": "lfadyr xr",
+        "expected": 2
+      },
+      {
+        "given": "d wqydc",
+        "expected": 5
+      },
+      {
+        "given": "qymc ybuatv",
+        "expected": 6
+      },
+      {
+        "given": "lbzd bvj",
+        "expected": 3
+      },
+      {
+        "given": "rglav ezsa",
+        "expected": 4
+      },
+      {
+        "given": "rahvm entsdl tmvzi rvdbxl",
+        "expected": 6
+      },
+      {
+        "given": "suzetj jwb tqz xjeig amtul wznx",
+        "expected": 4
+      },
+      {
+        "given": "e fuxo",
+        "expected": 4
+      },
+      {
+        "given": "ojc rwj slniab j fnvo",
+        "expected": 4
+      },
+      {
+        "given": "kfiuea gwctb r fn",
+        "expected": 2
+      },
+      {
+        "given": "wkoij hlo",
+        "expected": 3
+      },
+      {
+        "given": "ihuxln gz ihsmz",
+        "expected": 5
+      },
+      {
+        "given": "dzhivj v liqf on m",
+        "expected": 1
+      },
+      {
+        "given": "abtxu ndorty ebldc",
+        "expected": 5
+      },
+      {
+        "given": "zopcua vsgmcy",
+        "expected": 6
+      }
+    ]
+  },
+  "plusOne": {
+    "tests": [
+      {
+        "given": [
+          4,
+          6,
+          9,
+          4,
+          6
+        ],
+        "expected": [
+          4,
+          6,
+          9,
+          4,
+          7
+        ]
+      },
+      {
+        "given": [
+          1,
+          3,
+          4,
+          5,
+          2
+        ],
+        "expected": [
+          1,
+          3,
+          4,
+          5,
+          3
+        ]
+      },
+      {
+        "given": [
+          5,
+          2,
+          9,
+          9,
+          6,
+          6
+        ],
+        "expected": [
+          5,
+          2,
+          9,
+          9,
+          6,
+          7
+        ]
+      },
+      {
+        "given": [
+          0
+        ],
+        "expected": [
+          1
+        ]
+      },
+      {
+        "given": [
+          5,
+          6,
+          3,
+          3,
+          5
+        ],
+        "expected": [
+          5,
+          6,
+          3,
+          3,
+          6
+        ]
+      },
+      {
+        "given": [
+          6,
+          2,
+          8,
+          2
+        ],
+        "expected": [
+          6,
+          2,
+          8,
+          3
+        ]
+      },
+      {
+        "given": [
+          6,
+          0
+        ],
+        "expected": [
+          6,
+          1
+        ]
+      },
+      {
+        "given": [
+          7,
+          6,
+          4,
+          6,
+          7,
+          1
+        ],
+        "expected": [
+          7,
+          6,
+          4,
+          6,
+          7,
+          2
+        ]
+      },
+      {
+        "given": [
+          7,
+          2
+        ],
+        "expected": [
+          7,
+          3
+        ]
+      },
+      {
+        "given": [
+          6,
+          4,
+          4,
+          7,
+          1
+        ],
+        "expected": [
+          6,
+          4,
+          4,
+          7,
+          2
+        ]
+      },
+      {
+        "given": [
+          9,
+          3,
+          0,
+          6,
+          0
+        ],
+        "expected": [
+          9,
+          3,
+          0,
+          6,
+          1
+        ]
+      },
+      {
+        "given": [
+          2,
+          6,
+          8,
+          3,
+          2,
+          1
+        ],
+        "expected": [
+          2,
+          6,
+          8,
+          3,
+          2,
+          2
+        ]
+      },
+      {
+        "given": [
+          8,
+          6,
+          5,
+          7,
+          0
+        ],
+        "expected": [
+          8,
+          6,
+          5,
+          7,
+          1
+        ]
+      },
+      {
+        "given": [
+          9,
+          3,
+          2,
+          1,
+          4
+        ],
+        "expected": [
+          9,
+          3,
+          2,
+          1,
+          5
+        ]
+      },
+      {
+        "given": [
+          3,
+          5,
+          7,
+          8
+        ],
+        "expected": [
+          3,
+          5,
+          7,
+          9
+        ]
+      },
+      {
+        "given": [
+          2,
+          2,
+          8,
+          7
+        ],
+        "expected": [
+          2,
+          2,
+          8,
+          8
+        ]
+      },
+      {
+        "given": [
+          4,
+          1,
+          6,
+          0
+        ],
+        "expected": [
+          4,
+          1,
+          6,
+          1
+        ]
+      },
+      {
+        "given": [
+          6,
+          1,
+          8,
+          3
+        ],
+        "expected": [
+          6,
+          1,
+          8,
+          4
+        ]
+      },
+      {
+        "given": [
+          3,
+          5
+        ],
+        "expected": [
+          3,
+          6
+        ]
+      },
+      {
+        "given": [
+          7,
+          9,
+          9,
+          0,
+          8,
+          7
+        ],
+        "expected": [
+          7,
+          9,
+          9,
+          0,
+          8,
+          8
+        ]
+      },
+      {
+        "given": [
+          6,
+          1,
+          8,
+          0,
+          5
+        ],
+        "expected": [
+          6,
+          1,
+          8,
+          0,
+          6
+        ]
+      },
+      {
+        "given": [
+          3,
+          9,
+          0,
+          3
+        ],
+        "expected": [
+          3,
+          9,
+          0,
+          4
+        ]
+      },
+      {
+        "given": [
+          2,
+          6,
+          7,
+          8,
+          0
+        ],
+        "expected": [
+          2,
+          6,
+          7,
+          8,
+          1
+        ]
+      },
+      {
+        "given": [
+          5,
+          7,
+          7,
+          8,
+          9
+        ],
+        "expected": [
+          5,
+          7,
+          7,
+          9,
+          0
+        ]
+      },
+      {
+        "given": [
+          1,
+          2,
+          0,
+          3
+        ],
+        "expected": [
+          1,
+          2,
+          0,
+          4
+        ]
+      },
+      {
+        "given": [
+          1,
+          2,
+          0
+        ],
+        "expected": [
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "given": [
+          7,
+          5,
+          6,
+          2
+        ],
+        "expected": [
+          7,
+          5,
+          6,
+          3
+        ]
+      },
+      {
+        "given": [
+          5,
+          6,
+          9,
+          0
+        ],
+        "expected": [
+          5,
+          6,
+          9,
+          1
+        ]
+      },
+      {
+        "given": [
+          3,
+          8
+        ],
+        "expected": [
+          3,
+          9
+        ]
+      },
+      {
+        "given": [
+          8,
+          6,
+          1,
+          5,
+          1
+        ],
+        "expected": [
+          8,
+          6,
+          1,
+          5,
+          2
+        ]
+      },
+      {
+        "given": [
+          4,
+          1,
+          9,
+          1,
+          2,
+          0
+        ],
+        "expected": [
+          4,
+          1,
+          9,
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "given": [
+          4,
+          7,
+          6,
+          7,
+          9,
+          6
+        ],
+        "expected": [
+          4,
+          7,
+          6,
+          7,
+          9,
+          7
+        ]
+      },
+      {
+        "given": [
+          4,
+          6
+        ],
+        "expected": [
+          4,
+          7
+        ]
+      },
+      {
+        "given": [
+          7,
+          3,
+          8,
+          2,
+          4,
+          2
+        ],
+        "expected": [
+          7,
+          3,
+          8,
+          2,
+          4,
+          3
+        ]
+      },
+      {
+        "given": [
+          2,
+          6,
+          0,
+          7,
+          7,
+          7
+        ],
+        "expected": [
+          2,
+          6,
+          0,
+          7,
+          7,
+          8
+        ]
+      },
+      {
+        "given": [
+          2,
+          1,
+          8,
+          8
+        ],
+        "expected": [
+          2,
+          1,
+          8,
+          9
+        ]
+      },
+      {
+        "given": [
+          6,
+          6,
+          2,
+          0,
+          4,
+          6
+        ],
+        "expected": [
+          6,
+          6,
+          2,
+          0,
+          4,
+          7
+        ]
+      },
+      {
+        "given": [
+          4,
+          5,
+          3,
+          6,
+          4,
+          3
+        ],
+        "expected": [
+          4,
+          5,
+          3,
+          6,
+          4,
+          4
+        ]
+      },
+      {
+        "given": [
+          2,
+          4,
+          2
+        ],
+        "expected": [
+          2,
+          4,
+          3
+        ]
+      },
+      {
+        "given": [
+          8,
+          3,
+          8
+        ],
+        "expected": [
+          8,
+          3,
+          9
+        ]
+      },
+      {
+        "given": [
+          5,
+          7,
+          6
+        ],
+        "expected": [
+          5,
+          7,
+          7
+        ]
+      },
+      {
+        "given": [
+          2,
+          6,
+          9
+        ],
+        "expected": [
+          2,
+          7,
+          0
+        ]
+      },
+      {
+        "given": [
+          9,
+          6,
+          3
+        ],
+        "expected": [
+          9,
+          6,
+          4
+        ]
+      },
+      {
+        "given": [
+          7,
+          7,
+          5,
+          2
+        ],
+        "expected": [
+          7,
+          7,
+          5,
+          3
+        ]
+      },
+      {
+        "given": [
+          4,
+          5,
+          0,
+          7
+        ],
+        "expected": [
+          4,
+          5,
+          0,
+          8
+        ]
+      },
+      {
+        "given": [
+          7,
+          2,
+          2,
+          4,
+          0
+        ],
+        "expected": [
+          7,
+          2,
+          2,
+          4,
+          1
+        ]
+      },
+      {
+        "given": [
+          3,
+          8
+        ],
+        "expected": [
+          3,
+          9
+        ]
+      },
+      {
+        "given": [
+          5,
+          8,
+          6,
+          0,
+          1
+        ],
+        "expected": [
+          5,
+          8,
+          6,
+          0,
+          2
+        ]
+      },
+      {
+        "given": [
+          2,
+          1,
+          3,
+          3,
+          8,
+          5
+        ],
+        "expected": [
+          2,
+          1,
+          3,
+          3,
+          8,
+          6
+        ]
+      },
+      {
+        "given": [
+          6,
+          0,
+          3,
+          2
+        ],
+        "expected": [
+          6,
+          0,
+          3,
+          3
+        ]
+      }
+    ]
+  },
+  "sqrt": {
+    "tests": [
+      {
+        "given": 1207,
+        "expected": 34
+      },
+      {
+        "given": 5048,
+        "expected": 71
+      },
+      {
+        "given": 9735,
+        "expected": 98
+      },
+      {
+        "given": 9051,
+        "expected": 95
+      },
+      {
+        "given": 2435,
+        "expected": 49
+      },
+      {
+        "given": 8692,
+        "expected": 93
+      },
+      {
+        "given": 6190,
+        "expected": 78
+      },
+      {
+        "given": 8351,
+        "expected": 91
+      },
+      {
+        "given": 4367,
+        "expected": 66
+      },
+      {
+        "given": 6907,
+        "expected": 83
+      },
+      {
+        "given": 3163,
+        "expected": 56
+      },
+      {
+        "given": 6960,
+        "expected": 83
+      },
+      {
+        "given": 8326,
+        "expected": 91
+      },
+      {
+        "given": 6861,
+        "expected": 82
+      },
+      {
+        "given": 994,
+        "expected": 31
+      },
+      {
+        "given": 2584,
+        "expected": 50
+      },
+      {
+        "given": 3554,
+        "expected": 59
+      },
+      {
+        "given": 9578,
+        "expected": 97
+      },
+      {
+        "given": 3243,
+        "expected": 56
+      },
+      {
+        "given": 3193,
+        "expected": 56
+      },
+      {
+        "given": 5219,
+        "expected": 72
+      },
+      {
+        "given": 6352,
+        "expected": 79
+      },
+      {
+        "given": 1287,
+        "expected": 35
+      },
+      {
+        "given": 9896,
+        "expected": 99
+      },
+      {
+        "given": 2868,
+        "expected": 53
+      },
+      {
+        "given": 5271,
+        "expected": 72
+      },
+      {
+        "given": 9713,
+        "expected": 98
+      },
+      {
+        "given": 4883,
+        "expected": 69
+      },
+      {
+        "given": 8114,
+        "expected": 90
+      },
+      {
+        "given": 6761,
+        "expected": 82
+      },
+      {
+        "given": 6316,
+        "expected": 79
+      },
+      {
+        "given": 347,
+        "expected": 18
+      },
+      {
+        "given": 3383,
+        "expected": 58
+      },
+      {
+        "given": 6080,
+        "expected": 77
+      },
+      {
+        "given": 8133,
+        "expected": 90
+      },
+      {
+        "given": 9916,
+        "expected": 99
+      },
+      {
+        "given": 3176,
+        "expected": 56
+      },
+      {
+        "given": 5393,
+        "expected": 73
+      },
+      {
+        "given": 794,
+        "expected": 28
+      },
+      {
+        "given": 5945,
+        "expected": 77
+      },
+      {
+        "given": 7229,
+        "expected": 85
+      },
+      {
+        "given": 1707,
+        "expected": 41
+      },
+      {
+        "given": 8043,
+        "expected": 89
+      },
+      {
+        "given": 9187,
+        "expected": 95
+      },
+      {
+        "given": 8611,
+        "expected": 92
+      },
+      {
+        "given": 2579,
+        "expected": 50
+      },
+      {
+        "given": 9830,
+        "expected": 99
+      },
+      {
+        "given": 9087,
+        "expected": 95
+      },
+      {
+        "given": 8704,
+        "expected": 93
+      },
+      {
+        "given": 1355,
+        "expected": 36
+      }
+    ]
+  },
+  "climbStairs": {
+    "tests": [
+      {
+        "given": 11,
+        "expected": 144
+      },
+      {
+        "given": 42,
+        "expected": 433494437
+      },
+      {
+        "given": 42,
+        "expected": 433494437
+      },
+      {
+        "given": 14,
+        "expected": 610
+      },
+      {
+        "given": 7,
+        "expected": 21
+      },
+      {
+        "given": 8,
+        "expected": 34
+      },
+      {
+        "given": 38,
+        "expected": 63245986
+      },
+      {
+        "given": 45,
+        "expected": 1836311903
+      },
+      {
+        "given": 22,
+        "expected": 28657
+      },
+      {
+        "given": 39,
+        "expected": 102334155
+      },
+      {
+        "given": 42,
+        "expected": 433494437
+      },
+      {
+        "given": 39,
+        "expected": 102334155
+      },
+      {
+        "given": 40,
+        "expected": 165580141
+      },
+      {
+        "given": 10,
+        "expected": 89
+      },
+      {
+        "given": 4,
+        "expected": 5
+      },
+      {
+        "given": 24,
+        "expected": 75025
+      },
+      {
+        "given": 33,
+        "expected": 5702887
+      },
+      {
+        "given": 36,
+        "expected": 24157817
+      },
+      {
+        "given": 42,
+        "expected": 433494437
+      },
+      {
+        "given": 44,
+        "expected": 1134903170
+      },
+      {
+        "given": 31,
+        "expected": 2178309
+      },
+      {
+        "given": 44,
+        "expected": 1134903170
+      },
+      {
+        "given": 36,
+        "expected": 24157817
+      },
+      {
+        "given": 35,
+        "expected": 14930352
+      },
+      {
+        "given": 32,
+        "expected": 3524578
+      },
+      {
+        "given": 24,
+        "expected": 75025
+      },
+      {
+        "given": 28,
+        "expected": 514229
+      },
+      {
+        "given": 44,
+        "expected": 1134903170
+      },
+      {
+        "given": 29,
+        "expected": 832040
+      },
+      {
+        "given": 41,
+        "expected": 267914296
+      },
+      {
+        "given": 21,
+        "expected": 17711
+      },
+      {
+        "given": 11,
+        "expected": 144
+      },
+      {
+        "given": 16,
+        "expected": 1597
+      },
+      {
+        "given": 32,
+        "expected": 3524578
+      },
+      {
+        "given": 24,
+        "expected": 75025
+      },
+      {
+        "given": 15,
+        "expected": 987
+      },
+      {
+        "given": 1,
+        "expected": 1
+      },
+      {
+        "given": 21,
+        "expected": 17711
+      },
+      {
+        "given": 15,
+        "expected": 987
+      },
+      {
+        "given": 26,
+        "expected": 196418
+      },
+      {
+        "given": 18,
+        "expected": 4181
+      },
+      {
+        "given": 43,
+        "expected": 701408733
+      },
+      {
+        "given": 44,
+        "expected": 1134903170
+      },
+      {
+        "given": 24,
+        "expected": 75025
+      },
+      {
+        "given": 25,
+        "expected": 121393
+      },
+      {
+        "given": 14,
+        "expected": 610
+      },
+      {
+        "given": 39,
+        "expected": 102334155
+      },
+      {
+        "given": 12,
+        "expected": 233
+      },
+      {
+        "given": 33,
+        "expected": 5702887
+      },
+      {
+        "given": 5,
+        "expected": 8
+      }
+    ]
+  },
+  "removeDuplicatesSortedList": {
+    "tests": [
+      {
+        "given": [
+          3,
+          3,
+          6,
+          9
+        ],
+        "expected": [
+          3,
+          6,
+          9
+        ]
+      },
+      {
+        "given": [
+          2,
+          4,
+          4,
+          5
+        ],
+        "expected": [
+          2,
+          4,
+          5
+        ]
+      },
+      {
+        "given": [],
+        "expected": []
+      },
+      {
+        "given": [
+          1,
+          3,
+          3,
+          4,
+          8,
+          8,
+          8,
+          9
+        ],
+        "expected": [
+          1,
+          3,
+          4,
+          8,
+          9
+        ]
+      },
+      {
+        "given": [
+          4,
+          10,
+          10
+        ],
+        "expected": [
+          4,
+          10
+        ]
+      },
+      {
+        "given": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          5,
+          9,
+          9
+        ],
+        "expected": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          9
+        ]
+      },
+      {
+        "given": [
+          0,
+          0,
+          3,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "expected": [
+          0,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      {
+        "given": [
+          10
+        ],
+        "expected": [
+          10
+        ]
+      },
+      {
+        "given": [
+          0,
+          0,
+          1,
+          5
+        ],
+        "expected": [
+          0,
+          1,
+          5
+        ]
+      },
+      {
+        "given": [
+          0,
+          0,
+          3,
+          5,
+          9,
+          9
+        ],
+        "expected": [
+          0,
+          3,
+          5,
+          9
+        ]
+      },
+      {
+        "given": [
+          7,
+          8,
+          9,
+          9,
+          10
+        ],
+        "expected": [
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      {
+        "given": [
+          3,
+          4,
+          4,
+          5,
+          5,
+          7,
+          9
+        ],
+        "expected": [
+          3,
+          4,
+          5,
+          7,
+          9
+        ]
+      },
+      {
+        "given": [
+          1,
+          3,
+          4,
+          5,
+          9
+        ],
+        "expected": [
+          1,
+          3,
+          4,
+          5,
+          9
+        ]
+      },
+      {
+        "given": [
+          1,
+          2,
+          3,
+          4,
+          9
+        ],
+        "expected": [
+          1,
+          2,
+          3,
+          4,
+          9
+        ]
+      },
+      {
+        "given": [
+          5,
+          6,
+          7,
+          7,
+          8,
+          10
+        ],
+        "expected": [
+          5,
+          6,
+          7,
+          8,
+          10
+        ]
+      },
+      {
+        "given": [
+          5,
+          8,
+          9,
+          9,
+          9
+        ],
+        "expected": [
+          5,
+          8,
+          9
+        ]
+      },
+      {
+        "given": [],
+        "expected": []
+      },
+      {
+        "given": [
+          1,
+          2,
+          3,
+          7,
+          8,
+          9,
+          10,
+          10
+        ],
+        "expected": [
+          1,
+          2,
+          3,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      {
+        "given": [
+          1,
+          4,
+          9,
+          9,
+          10
+        ],
+        "expected": [
+          1,
+          4,
+          9,
+          10
+        ]
+      },
+      {
+        "given": [
+          1,
+          2,
+          5,
+          6,
+          9,
+          10
+        ],
+        "expected": [
+          1,
+          2,
+          5,
+          6,
+          9,
+          10
+        ]
+      },
+      {
+        "given": [
+          5,
+          7,
+          7
+        ],
+        "expected": [
+          5,
+          7
+        ]
+      },
+      {
+        "given": [
+          2,
+          6,
+          6,
+          8
+        ],
+        "expected": [
+          2,
+          6,
+          8
+        ]
+      },
+      {
+        "given": [
+          7
+        ],
+        "expected": [
+          7
+        ]
+      },
+      {
+        "given": [],
+        "expected": []
+      },
+      {
+        "given": [
+          3,
+          4,
+          5,
+          8
+        ],
+        "expected": [
+          3,
+          4,
+          5,
+          8
+        ]
+      },
+      {
+        "given": [],
+        "expected": []
+      },
+      {
+        "given": [
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          10
+        ],
+        "expected": [
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          10
+        ]
+      },
+      {
+        "given": [
+          0,
+          8
+        ],
+        "expected": [
+          0,
+          8
+        ]
+      },
+      {
+        "given": [
+          2,
+          8
+        ],
+        "expected": [
+          2,
+          8
+        ]
+      },
+      {
+        "given": [
+          0,
+          0,
+          1,
+          2,
+          3,
+          6,
+          8
+        ],
+        "expected": [
+          0,
+          1,
+          2,
+          3,
+          6,
+          8
+        ]
+      },
+      {
+        "given": [],
+        "expected": []
+      },
+      {
+        "given": [
+          2,
+          3,
+          7,
+          9,
+          10,
+          10
+        ],
+        "expected": [
+          2,
+          3,
+          7,
+          9,
+          10
+        ]
+      },
+      {
+        "given": [
+          1,
+          8
+        ],
+        "expected": [
+          1,
+          8
+        ]
+      },
+      {
+        "given": [
+          1,
+          2,
+          2,
+          4,
+          8,
+          9
+        ],
+        "expected": [
+          1,
+          2,
+          4,
+          8,
+          9
+        ]
+      },
+      {
+        "given": [],
+        "expected": []
+      },
+      {
+        "given": [
+          2,
+          5,
+          7,
+          8,
+          10,
+          10
+        ],
+        "expected": [
+          2,
+          5,
+          7,
+          8,
+          10
+        ]
+      },
+      {
+        "given": [
+          8
+        ],
+        "expected": [
+          8
+        ]
+      },
+      {
+        "given": [],
+        "expected": []
+      },
+      {
+        "given": [
+          3,
+          4,
+          5,
+          9
+        ],
+        "expected": [
+          3,
+          4,
+          5,
+          9
+        ]
+      },
+      {
+        "given": [
+          2,
+          10
+        ],
+        "expected": [
+          2,
+          10
+        ]
+      },
+      {
+        "given": [
+          5
+        ],
+        "expected": [
+          5
+        ]
+      },
+      {
+        "given": [
+          0,
+          0,
+          0,
+          3,
+          4,
+          6
+        ],
+        "expected": [
+          0,
+          3,
+          4,
+          6
+        ]
+      },
+      {
+        "given": [
+          3,
+          4,
+          7
+        ],
+        "expected": [
+          3,
+          4,
+          7
+        ]
+      },
+      {
+        "given": [
+          4,
+          8
+        ],
+        "expected": [
+          4,
+          8
+        ]
+      },
+      {
+        "given": [
+          4,
+          6,
+          6,
+          6
+        ],
+        "expected": [
+          4,
+          6
+        ]
+      },
+      {
+        "given": [
+          10
+        ],
+        "expected": [
+          10
+        ]
+      },
+      {
+        "given": [
+          8
+        ],
+        "expected": [
+          8
+        ]
+      },
+      {
+        "given": [
+          7
+        ],
+        "expected": [
+          7
+        ]
+      },
+      {
+        "given": [
+          6,
+          7,
+          9
+        ],
+        "expected": [
+          6,
+          7,
+          9
+        ]
+      },
+      {
+        "given": [
+          1,
+          4
+        ],
+        "expected": [
+          1,
+          4
+        ]
+      }
+    ]
+  },
+  "mergeSortedArray": {
+    "tests": [
+      {
+        "given": {
+          "nums1": [
+            8,
+            8,
+            15,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            1,
+            9,
+            16
+          ],
+          "n": 3
+        },
+        "expected": [
+          1,
+          8,
+          8,
+          9,
+          15,
+          16
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            6,
+            9,
+            11,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            12,
+            15,
+            19
+          ],
+          "n": 3
+        },
+        "expected": [
+          6,
+          9,
+          11,
+          12,
+          15,
+          19
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            4,
+            13,
+            17,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            1,
+            2,
+            11
+          ],
+          "n": 3
+        },
+        "expected": [
+          1,
+          2,
+          4,
+          11,
+          13,
+          17
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            3,
+            5,
+            16,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            9,
+            19,
+            20
+          ],
+          "n": 3
+        },
+        "expected": [
+          3,
+          5,
+          9,
+          16,
+          19,
+          20
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            7,
+            12,
+            19,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            3,
+            13,
+            13
+          ],
+          "n": 3
+        },
+        "expected": [
+          3,
+          7,
+          12,
+          13,
+          13,
+          19
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            6,
+            6,
+            18,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            4,
+            5,
+            18
+          ],
+          "n": 3
+        },
+        "expected": [
+          4,
+          5,
+          6,
+          6,
+          18,
+          18
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            3,
+            14,
+            20,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            3,
+            4,
+            19
+          ],
+          "n": 3
+        },
+        "expected": [
+          3,
+          3,
+          4,
+          14,
+          19,
+          20
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            0,
+            3,
+            10,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            7,
+            12,
+            13
+          ],
+          "n": 3
+        },
+        "expected": [
+          0,
+          3,
+          7,
+          10,
+          12,
+          13
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            9,
+            16,
+            17,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            3,
+            5,
+            8
+          ],
+          "n": 3
+        },
+        "expected": [
+          3,
+          5,
+          8,
+          9,
+          16,
+          17
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            6,
+            13,
+            20,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            5,
+            11,
+            20
+          ],
+          "n": 3
+        },
+        "expected": [
+          5,
+          6,
+          11,
+          13,
+          20,
+          20
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            2,
+            10,
+            11,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            16,
+            16,
+            17
+          ],
+          "n": 3
+        },
+        "expected": [
+          2,
+          10,
+          11,
+          16,
+          16,
+          17
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            13,
+            19,
+            19,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            6,
+            7,
+            10
+          ],
+          "n": 3
+        },
+        "expected": [
+          6,
+          7,
+          10,
+          13,
+          19,
+          19
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            10,
+            10,
+            14,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            5,
+            7,
+            10
+          ],
+          "n": 3
+        },
+        "expected": [
+          5,
+          7,
+          10,
+          10,
+          10,
+          14
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            4,
+            11,
+            20,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            0,
+            4,
+            8
+          ],
+          "n": 3
+        },
+        "expected": [
+          0,
+          4,
+          4,
+          8,
+          11,
+          20
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            6,
+            14,
+            17,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            11,
+            17,
+            19
+          ],
+          "n": 3
+        },
+        "expected": [
+          6,
+          11,
+          14,
+          17,
+          17,
+          19
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            4,
+            7,
+            15,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            4,
+            10,
+            19
+          ],
+          "n": 3
+        },
+        "expected": [
+          4,
+          4,
+          7,
+          10,
+          15,
+          19
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            7,
+            17,
+            19,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            0,
+            8,
+            16
+          ],
+          "n": 3
+        },
+        "expected": [
+          0,
+          7,
+          8,
+          16,
+          17,
+          19
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            1,
+            2,
+            5,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            7,
+            10,
+            16
+          ],
+          "n": 3
+        },
+        "expected": [
+          1,
+          2,
+          5,
+          7,
+          10,
+          16
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            10,
+            14,
+            14,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            3,
+            6,
+            11
+          ],
+          "n": 3
+        },
+        "expected": [
+          3,
+          6,
+          10,
+          11,
+          14,
+          14
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            0,
+            3,
+            8,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            1,
+            2,
+            4
+          ],
+          "n": 3
+        },
+        "expected": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          8
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            6,
+            9,
+            14,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            15,
+            17,
+            17
+          ],
+          "n": 3
+        },
+        "expected": [
+          6,
+          9,
+          14,
+          15,
+          17,
+          17
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            1,
+            6,
+            17,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            11,
+            11,
+            17
+          ],
+          "n": 3
+        },
+        "expected": [
+          1,
+          6,
+          11,
+          11,
+          17,
+          17
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            1,
+            4,
+            16,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            10,
+            16,
+            20
+          ],
+          "n": 3
+        },
+        "expected": [
+          1,
+          4,
+          10,
+          16,
+          16,
+          20
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            10,
+            12,
+            18,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            0,
+            2,
+            5
+          ],
+          "n": 3
+        },
+        "expected": [
+          0,
+          2,
+          5,
+          10,
+          12,
+          18
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            8,
+            11,
+            11,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            0,
+            12,
+            18
+          ],
+          "n": 3
+        },
+        "expected": [
+          0,
+          8,
+          11,
+          11,
+          12,
+          18
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            1,
+            3,
+            5,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            4,
+            17,
+            18
+          ],
+          "n": 3
+        },
+        "expected": [
+          1,
+          3,
+          4,
+          5,
+          17,
+          18
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            5,
+            17,
+            17,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            8,
+            8,
+            17
+          ],
+          "n": 3
+        },
+        "expected": [
+          5,
+          8,
+          8,
+          17,
+          17,
+          17
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            12,
+            19,
+            20,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            0,
+            1,
+            12
+          ],
+          "n": 3
+        },
+        "expected": [
+          0,
+          1,
+          12,
+          12,
+          19,
+          20
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            7,
+            14,
+            16,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            1,
+            6,
+            17
+          ],
+          "n": 3
+        },
+        "expected": [
+          1,
+          6,
+          7,
+          14,
+          16,
+          17
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            0,
+            7,
+            12,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            5,
+            9,
+            18
+          ],
+          "n": 3
+        },
+        "expected": [
+          0,
+          5,
+          7,
+          9,
+          12,
+          18
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            3,
+            11,
+            18,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            4,
+            5,
+            8
+          ],
+          "n": 3
+        },
+        "expected": [
+          3,
+          4,
+          5,
+          8,
+          11,
+          18
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            2,
+            11,
+            19,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            1,
+            4,
+            17
+          ],
+          "n": 3
+        },
+        "expected": [
+          1,
+          2,
+          4,
+          11,
+          17,
+          19
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            1,
+            17,
+            20,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            1,
+            6,
+            15
+          ],
+          "n": 3
+        },
+        "expected": [
+          1,
+          1,
+          6,
+          15,
+          17,
+          20
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            5,
+            9,
+            18,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            5,
+            9,
+            11
+          ],
+          "n": 3
+        },
+        "expected": [
+          5,
+          5,
+          9,
+          9,
+          11,
+          18
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            1,
+            8,
+            15,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            11,
+            16,
+            18
+          ],
+          "n": 3
+        },
+        "expected": [
+          1,
+          8,
+          11,
+          15,
+          16,
+          18
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            10,
+            11,
+            15,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            8,
+            9,
+            14
+          ],
+          "n": 3
+        },
+        "expected": [
+          8,
+          9,
+          10,
+          11,
+          14,
+          15
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            0,
+            2,
+            19,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            9,
+            9,
+            12
+          ],
+          "n": 3
+        },
+        "expected": [
+          0,
+          2,
+          9,
+          9,
+          12,
+          19
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            0,
+            7,
+            13,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            0,
+            5,
+            19
+          ],
+          "n": 3
+        },
+        "expected": [
+          0,
+          0,
+          5,
+          7,
+          13,
+          19
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            9,
+            10,
+            13,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            2,
+            3,
+            9
+          ],
+          "n": 3
+        },
+        "expected": [
+          2,
+          3,
+          9,
+          9,
+          10,
+          13
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            1,
+            5,
+            20,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            2,
+            10,
+            11
+          ],
+          "n": 3
+        },
+        "expected": [
+          1,
+          2,
+          5,
+          10,
+          11,
+          20
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            1,
+            2,
+            17,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            8,
+            18,
+            20
+          ],
+          "n": 3
+        },
+        "expected": [
+          1,
+          2,
+          8,
+          17,
+          18,
+          20
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            6,
+            12,
+            19,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            0,
+            3,
+            4
+          ],
+          "n": 3
+        },
+        "expected": [
+          0,
+          3,
+          4,
+          6,
+          12,
+          19
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            0,
+            3,
+            3,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            6,
+            10,
+            18
+          ],
+          "n": 3
+        },
+        "expected": [
+          0,
+          3,
+          3,
+          6,
+          10,
+          18
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            2,
+            10,
+            13,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            1,
+            13,
+            18
+          ],
+          "n": 3
+        },
+        "expected": [
+          1,
+          2,
+          10,
+          13,
+          13,
+          18
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            3,
+            7,
+            17,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            8,
+            17,
+            17
+          ],
+          "n": 3
+        },
+        "expected": [
+          3,
+          7,
+          8,
+          17,
+          17,
+          17
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            5,
+            5,
+            15,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            0,
+            15,
+            19
+          ],
+          "n": 3
+        },
+        "expected": [
+          0,
+          5,
+          5,
+          15,
+          15,
+          19
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            2,
+            3,
+            7,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            3,
+            7,
+            10
+          ],
+          "n": 3
+        },
+        "expected": [
+          2,
+          3,
+          3,
+          7,
+          7,
+          10
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            5,
+            5,
+            15,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            7,
+            9,
+            20
+          ],
+          "n": 3
+        },
+        "expected": [
+          5,
+          5,
+          7,
+          9,
+          15,
+          20
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            7,
+            14,
+            16,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            16,
+            17,
+            18
+          ],
+          "n": 3
+        },
+        "expected": [
+          7,
+          14,
+          16,
+          16,
+          17,
+          18
+        ]
+      },
+      {
+        "given": {
+          "nums1": [
+            0,
+            9,
+            14,
+            0,
+            0,
+            0
+          ],
+          "m": 3,
+          "nums2": [
+            6,
+            6,
+            11
+          ],
+          "n": 3
+        },
+        "expected": [
+          0,
+          6,
+          6,
+          9,
+          11,
+          14
+        ]
+      }
+    ]
+  }
+}
