@@ -6,12 +6,12 @@ import { defaultSolutions } from "@/lib/solutions";
 
 type TestCase = { given: unknown; expected: unknown };
 export type QuestionMap = Record<string, { tests: TestCase[] }>;
-
-export default async function QuestionPage({
-    params,
-}: {
+interface Props {
     params: { slug: string };
-}) {
+}
+
+
+export default async function QuestionPage({ params }: Props) {
     const data = await getTestsJson();
 
     const question = data?.[params.slug];
