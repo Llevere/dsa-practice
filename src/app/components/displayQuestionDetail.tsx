@@ -34,6 +34,7 @@ export default function DisplayQuestionDetail({ index, data }: Props) {
             <br />
             Time: {data.timeMs?.toFixed(2)} ms
             <br />
+            Logs: {data.logs}
             {data.error && <div>Error: {data.error}</div>}
         </div>
     )

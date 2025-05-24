@@ -1,4 +1,6 @@
-export default function QuestionTitle({ children }) {
+'use client'
+
+export default function QuestionTitle({ children }: { children: string }) {
   return (
     <div className="flex flex-col items-center justify-center text-center mt-5 border border-gray-300 rounded-lg p-6 shadow-md">
       <h1 className="text-2xl font-bold">Question</h1>

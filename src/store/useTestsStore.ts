@@ -6,8 +6,8 @@ type QuestionMap = Record<string, { tests: TestCase[] }>;
 type TestStore = {
   tests: QuestionMap;
   setTests: (data: QuestionMap) => void;
-  getTests: (testId: string) => TestCase[];
-  fetchTests: () => Promise<void>;
+  getTests: (testId: string) => Promise<TestCase[]>;
+  fetchTests: () => Promise<QuestionMap>;
   getTestKeys: () => { id: string; tests: TestCase[] }[];
 };
 
@@ -17,17 +17,24 @@ export const useTestsStore = create<TestStore>()(
       tests: {},
       setTests: (data) => set({ tests: data }),
 
-      getTests: (testId) => {
-        return get().tests[testId]?.tests.splice(0, 3);
+      getTests: async (testId: string): Promise<TestCase[]> => {
+        let tests = get().tests[testId]?.tests;
+        if (!tests) {
+          await get().fetchTests();
+          tests = get().tests[testId]?.tests;
+        }
+        return tests?.slice(0, 3) ?? [];
       },
 
-      fetchTests: async () => {
+      fetchTests: async (): Promise<QuestionMap> => {
         try {
           const res = await fetch("/data/tests.json");
           const data: QuestionMap = await res.json();
           set({ tests: data });
+          return data;
         } catch (error) {
           console.error("Failed to fetch tests:", error);
+          return {};
         }
       },
 
@@ -40,7 +47,7 @@ export const useTestsStore = create<TestStore>()(
       },
     }),
     {
-      name: "dsa-tests", // key in localStorage
+      name: "dsa-tests",
     }
   )
 );

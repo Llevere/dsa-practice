@@ -3,10 +3,11 @@
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import axios from "axios";
-import DisplayQuestionDetail from "./displayQuestionDetail";
+import DisplayQuestionDetail from "./DisplayQuestionDetail";
 
 const MonacoEditor = dynamic(() => import("@monaco-editor/react"), { ssr: false });
 type TestCase = { given: unknown; expected: unknown };
+type FailedTests = { given: unknown; expected: unknown; actual: unknown };
 type SolutionObject = {
     "label": string,
     "code": string
@@ -21,7 +22,7 @@ type QuestionResult = {
     timeMs: number,
     error?: string
 }
-type SubmissionSummary = { passed: number; failed: TestCase[], total: number; avgTime: number };
+type SubmissionSummary = { passed: number; failed: FailedTests[], total: number; avgTime: number };
 
 
 type Props = {
@@ -156,9 +157,9 @@ export default function CodeBlock({ tests, solutions, testId }: Props) {
                                             ❌ {summaries[i].failed.length} test{summaries[i].failed.length > 1 ? 's' : ''} failed
                                         </p>
                                         <ul className="list-disc pl-5 text-sm text-red-600">
-                                            {summaries[i].failed.map(({ given, expected }, j) => (
+                                            {summaries[i].failed.map(({ given, expected, actual }, j) => (
                                                 <li key={j}>
-                                                    <strong>Given:</strong> {JSON.stringify(given)} | <strong>Expected:</strong> {JSON.stringify(expected)}
+                                                    <strong>Given:</strong> {JSON.stringify(given)} | <strong>Expected:</strong> {JSON.stringify(expected)} <strong>Actual: </strong> {JSON.stringify(actual)}
                                                 </li>
                                             ))}
                                         </ul>

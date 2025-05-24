@@ -14,22 +14,36 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const results = tests.map((test) => {
       const logs: string[] = [];
+
       const vm = new NodeVM({
         console: "redirect",
         sandbox: {},
         timeout: 1000,
         wrapper: "commonjs",
       });
-      // vm.on("console.log", (msg) => logs.push(String(msg)));
-      try {
-        const wrappedCode = `
+
+      vm.on("console.log", (msg) => logs.push(String(msg)));
+
+      const isVariadicCall = Array.isArray(test.given);
+
+      const argsJson = isVariadicCall
+        ? JSON.stringify(test.given) // e.g. [[1,2,3], 4]
+        : JSON.stringify([test.given]); // e.g. [123] or [{ nums: [...], target: x }]
+
+      const wrappedCode = `
         const _nonce = ${Math.random()};
-        module.exports = (function() {
+        const args = ${argsJson};
+        let solveFn;
+        (function() {
           ${code}
-          return solve(${JSON.stringify(test.given)});
+          solveFn = typeof solve === 'function' ? solve : () => 'solve not defined';
         })();
+
+        const result = solveFn(...args);
+        module.exports = result === undefined ? args[0] : result;
       `;
 
+      try {
         const start = performance.now();
         const result = vm.run(wrappedCode, "vm.ts");
         const end = performance.now();
@@ -44,7 +58,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         };
       } catch (err) {
         const message = err instanceof Error ? err.message : "Unknown error";
-        console.error("Error in run.ts tests" + err);
+        console.error("Error in run.ts tests", err);
         return {
           input: test.given,
           expected: test.expected,

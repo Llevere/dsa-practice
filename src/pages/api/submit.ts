@@ -5,6 +5,7 @@ import path from "path";
 import fs from "fs";
 
 type TestCase = { given: unknown; expected: unknown };
+type FailedTests = { given: unknown; expected: unknown; actual: unknown };
 type QuestionResult = { pass: boolean; timeMs: number };
 
 export default async function handler(
@@ -25,7 +26,7 @@ export default async function handler(
       return res.status(400).json({ error: `No tests found for ${testId}` });
     }
 
-    const failedTests: TestCase[] = [];
+    const failedTests: FailedTests[] = [];
     const results: QuestionResult[] = question.tests.map((test: TestCase) => {
       const logs: string[] = [];
       const vm = new NodeVM({
@@ -38,19 +39,35 @@ export default async function handler(
       vm.on("console.log", (msg) => logs.push(String(msg)));
 
       try {
+        const isVariadicCall = Array.isArray(test.given);
+
+        const argsJson = isVariadicCall
+          ? JSON.stringify(test.given)
+          : JSON.stringify([test.given]);
+
         const wrappedCode = `
           const _nonce = ${Math.random()};
-          module.exports = (function() {
+          const args = ${argsJson};
+          let solveFn;
+          (function() {
             ${code}
-            return solve(${JSON.stringify(test.given)});
+            solveFn = typeof solve === 'function' ? solve : () => 'solve not defined';
           })();
+  
+          const result = solveFn(...args);
+          module.exports = result === undefined ? args[0] : result;
         `;
+
         const start = performance.now();
         const result = vm.run(wrappedCode, "vm.js");
         const end = performance.now();
         const passed = JSON.stringify(result) === JSON.stringify(test.expected);
         if (!passed) {
-          failedTests.push(test);
+          failedTests.push({
+            given: test.given,
+            expected: test.expected,
+            actual: result,
+          });
         }
         return {
           pass: passed,
