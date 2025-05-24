@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import axios from "axios";
-import DisplayQuestionDetail from "./DisplayQuestionDetail";
+import DisplayQuestionDetail from "./displayQuestionDetail";
 
 const MonacoEditor = dynamic(() => import("@monaco-editor/react"), { ssr: false });
 type TestCase = { given: unknown; expected: unknown };
