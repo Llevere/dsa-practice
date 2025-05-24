@@ -12,26 +12,21 @@ export default async function QuestionPage({
 }: {
     params: { slug: string };
 }) {
-
     const data = await getTestsJson();
 
-    if (!data) {
-        redirect(`/?toast=${encodeURIComponent("Test list is empty, something went wrong.")}`);
-    }
-    const question = data[params.slug];
+    const question = data?.[params.slug];
 
     if (!question || !Array.isArray(question.tests)) {
         redirect(`/?toast=${encodeURIComponent("Invalid question. Redirected to home.")}`);
     }
 
     const tests = question.tests.slice(0, 3);
-
     const solutions = defaultSolutions[params.slug] || [];
 
     return (
         <div className="">
-            <QuestionTitle>{params?.slug}</QuestionTitle>
-            <CodeBlock tests={tests} solutions={solutions} testId={params?.slug} />
+            <QuestionTitle>{params.slug}</QuestionTitle>
+            <CodeBlock tests={tests} solutions={solutions} testId={params.slug} />
         </div>
     );
 }
