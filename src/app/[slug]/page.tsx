@@ -1,4 +1,4 @@
-import CodeBlock from "../components/CodeBlock";
+import CodeBlock from "../components/codeBlock";
 import QuestionTitle from "../components/QuestionTitle";
 import { redirect } from "next/navigation";
 import { getTestsJson } from "@/lib/loadTests";
