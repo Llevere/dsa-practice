@@ -1,8 +1,7 @@
 "use client";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { NodeVM } from "vm2";
-import path from "path";
-import fs from "fs";
+import { getTestsJson } from "@/lib/loadTests";
 
 type TestCase = { given: unknown; expected: unknown };
 type FailedTests = { given: unknown; expected: unknown; actual: unknown };
@@ -17,9 +16,7 @@ export default async function handler(
   const { code, testId }: { code: string; testId: string } = req.body;
 
   try {
-    const filePath = path.join(process.cwd(), "public", "data", "tests.json");
-    const fileContents = fs.readFileSync(filePath, "utf-8");
-    const allTests = JSON.parse(fileContents);
+    const allTests = await getTestsJson();
 
     const question = allTests[testId];
     if (!question || !Array.isArray(question.tests)) {
@@ -39,11 +36,10 @@ export default async function handler(
       vm.on("console.log", (msg) => logs.push(String(msg)));
 
       try {
-        const isVariadicCall = Array.isArray(test.given);
+        const { given } = test;
 
-        const argsJson = isVariadicCall
-          ? JSON.stringify(test.given)
-          : JSON.stringify([test.given]);
+        const argsJson = JSON.stringify(given);
+        console.log(argsJson);
 
         const wrappedCode = `
           const _nonce = ${Math.random()};
@@ -53,11 +49,13 @@ export default async function handler(
             ${code}
             solveFn = typeof solve === 'function' ? solve : () => 'solve not defined';
           })();
-  
-          const result = solveFn(...args);
-          module.exports = result === undefined ? args[0] : result;
+        
+          const result = Array.isArray(args[0])
+            ? solveFn(...args)
+            : solveFn(args);
+        
+          module.exports = result === undefined ? args : result;
         `;
-
         const start = performance.now();
         const result = vm.run(wrappedCode, "vm.js");
         const end = performance.now();
