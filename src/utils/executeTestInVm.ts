@@ -35,10 +35,6 @@ export function runSingleTest(code: string, test: TestCase) {
     module.exports = result;
   `;
 
-  console.log("==== Injected Code ====");
-  console.log(wrappedCode);
-  console.log("=======================");
-
   const start = performance.now();
   try {
     const result = vm.run(wrappedCode, "vm.js");
