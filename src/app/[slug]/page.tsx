@@ -21,10 +21,10 @@ export default async function QuestionPage({
 
     return (
         <div className="min-h-screen bg-base-100 px-4 sm:px-6 md:px-8 py-10">
-            <div className="max-w-6xl mx-auto space-y-6">
-                <div className="flex flex-col items-center justify-center text-center border border-base-300 rounded-lg p-6 shadow-md bg-base-200">
-                    <h1 className="text-3xl font-bold">Question</h1>
-                    <p className="text-base-content mt-2">{slug}</p>
+            <div className="max-w-6xl mx-auto space-y-6 ">
+                <div className="bg-base-200 border border-base-300 rounded-lg p-6 shadow-md text-center mt-5 text-base-content ">
+                    <h1 className="text-2xl font-bold text-base-content">Question</h1>
+                    <p className="mt-2 opacity-80">{slug}</p>
                 </div>
 
                 <div className="min-h-screen bg-base-100 px-4 sm:px-6 md:px-8 py-10">

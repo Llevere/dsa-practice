@@ -1,8 +1,8 @@
 export default function TestTitle({ children }: { children: string }) {
     return (
-        <div className="flex flex-col items-center justify-center text-center mt-5 border border-gray-300 rounded-lg p-6 shadow-md">
-            <h1 className="text-2xl font-bold">Question</h1>
-            <p className="text-white-600 mt-2">{children}</p>
+        <div className="bg-base-200 border border-base-300 rounded-lg p-6 shadow-md text-center mt-5 text-primary">
+            <h1 className="font-bold">Question</h1>
+            <p className="mt-2 text-sm opacity-80">{children}</p>
         </div>
     );
 }
