@@ -2201,431 +2201,56 @@
   },
   "longestCommonPrefix": {
     "tests": [
-      {
-        "given": [
-          "ocgkx",
-          "ocbsr"
-        ],
-        "expected": "oc"
-      },
-      {
-        "given": [
-          "wkjecxyg",
-          "vzc",
-          "wkjescyil"
-        ],
-        "expected": ""
-      },
-      {
-        "given": [
-          "pwbisui",
-          "pwbifml",
-          "tpb",
-          "pwbikerc",
-          "pwbiggce"
-        ],
-        "expected": ""
-      },
-      {
-        "given": [
-          "vanandd",
-          "add",
-          "vanykhz",
-          "vanehncv"
-        ],
-        "expected": ""
-      },
-      {
-        "given": [
-          "mkitbywg",
-          "mkitbhdf",
-          "mkitbtz",
-          "htf",
-          "mkitbofwup"
-        ],
-        "expected": ""
-      },
-      {
-        "given": [
-          "gjvn",
-          "gjyvdn",
-          "gjvlmf",
-          "gjpp"
-        ],
-        "expected": "gj"
-      },
-      {
-        "given": [
-          "vijyaxm",
-          "smw",
-          "viwotz"
-        ],
-        "expected": ""
-      },
-      {
-        "given": [
-          "svsncjs",
-          "svsnmqqdk",
-          "svsnsnmg"
-        ],
-        "expected": "svsn"
-      },
-      {
-        "given": [
-          "oxgkg",
-          "oxgiid",
-          "oxgdnz",
-          "oxgbvo"
-        ],
-        "expected": "oxg"
-      },
-      {
-        "given": [
-          "edxruad",
-          "edxrusi",
-          "edxrugj",
-          "dmx",
-          "edxrumij"
-        ],
-        "expected": ""
-      },
-      {
-        "given": [
-          "ixuaixk",
-          "ixjyyr",
-          "ixkjjg",
-          "ixwyilc",
-          "ixzn"
-        ],
-        "expected": "ix"
-      },
-      {
-        "given": [
-          "btj",
-          "ywdsnwm"
-        ],
-        "expected": ""
-      },
-      {
-        "given": [
-          "oezwnwrp",
-          "oezrhrl",
-          "oezxbx",
-          "oezoj"
-        ],
-        "expected": "oez"
-      },
-      {
-        "given": [
-          "bfanglx",
-          "dua",
-          "bfaniprdh"
-        ],
-        "expected": ""
-      },
-      {
-        "given": [
-          "jpvx",
-          "jpfts",
-          "mxr",
-          "jpke",
-          "jpwgf"
-        ],
-        "expected": ""
-      },
-      {
-        "given": [
-          "evs",
-          "hasaxfds"
-        ],
-        "expected": ""
-      },
-      {
-        "given": [
-          "gjwqxxu",
-          "gjwqxiad",
-          "gjwqxiucsc",
-          "gjwqxdfsit",
-          "qok"
-        ],
-        "expected": ""
-      },
-      {
-        "given": [
-          "asrxnlcmg",
-          "asrxncjr",
-          "asrxnlmhc"
-        ],
-        "expected": "asrxn"
-      },
-      {
-        "given": [
-          "jflm",
-          "jfgn",
-          "jfndu",
-          "jfljb",
-          "jftzmzz"
-        ],
-        "expected": "jf"
-      },
-      {
-        "given": [
-          "dpmtms",
-          "dpmxxjji",
-          "dpmqc",
-          "dpmce",
-          "dpmkn"
-        ],
-        "expected": "dpm"
-      },
-      {
-        "given": [
-          "llk",
-          "jeoxbqx"
-        ],
-        "expected": ""
-      },
-      {
-        "given": [
-          "srt",
-          "nlkb",
-          "nlsvq",
-          "nlzkmzk",
-          "nlmvzs"
-        ],
-        "expected": ""
-      },
-      {
-        "given": [
-          "bdo",
-          "ifeipzh"
-        ],
-        "expected": ""
-      },
-      {
-        "given": [
-          "ukdnsndo",
-          "ukdnsvyg",
-          "nop",
-          "ukdnsbzy"
-        ],
-        "expected": ""
-      },
-      {
-        "given": [
-          "hsvamixyk",
-          "hkl",
-          "hsvaxtfe"
-        ],
-        "expected": "h"
-      },
-      {
-        "given": [
-          "uxjpesjzv",
-          "uxjpyu",
-          "uxjpkqzmw",
-          "nue"
-        ],
-        "expected": ""
-      },
-      {
-        "given": [
-          "gdwalb",
-          "gdwuhvad",
-          "ohq"
-        ],
-        "expected": ""
-      },
-      {
-        "given": [
-          "dhvwuc",
-          "dhvuxj",
-          "dhvbkc",
-          "kul"
-        ],
-        "expected": ""
-      },
-      {
-        "given": [
-          "wmauil",
-          "wmauhne",
-          "wmauowq",
-          "wmauvjsg",
-          "wmaupdtn"
-        ],
-        "expected": "wmau"
-      },
-      {
-        "given": [
-          "hopkvzebk",
-          "ecj",
-          "hopkiqy"
-        ],
-        "expected": ""
-      },
-      {
-        "given": [
-          "muk",
-          "lonaneqb",
-          "lonanyxu",
-          "lonanaei"
-        ],
-        "expected": ""
-      },
-      {
-        "given": [
-          "cnmradm",
-          "xqp"
-        ],
-        "expected": ""
-      },
-      {
-        "given": [
-          "bouhobjaq",
-          "bouhorvsa",
-          "bouhofheg"
-        ],
-        "expected": "bouho"
-      },
-      {
-        "given": [
-          "nixxygbmf",
-          "nixxyqr"
-        ],
-        "expected": "nixxy"
-      },
-      {
-        "given": [
-          "dwgco",
-          "dwgxdoje",
-          "dwglhnoq",
-          "dwgzjy",
-          "ayw"
-        ],
-        "expected": ""
-      },
-      {
-        "given": [
-          "jlqebi",
-          "jlqegltg",
-          "jlqeun"
-        ],
-        "expected": "jlqe"
-      },
-      {
-        "given": [
-          "wkfhyxwiy",
-          "wkfhywezc",
-          "gtl",
-          "wkfhyzuf"
-        ],
-        "expected": ""
-      },
-      {
-        "given": [
-          "fnzdbt",
-          "fnztoowa",
-          "wwq"
-        ],
-        "expected": ""
-      },
-      {
-        "given": [
-          "chfairnsk",
-          "ydo",
-          "chfanit",
-          "chfahjoa",
-          "chfakxmf"
-        ],
-        "expected": ""
-      },
-      {
-        "given": [
-          "dedqmjlqd",
-          "dedqsfu",
-          "yxr"
-        ],
-        "expected": ""
-      },
-      {
-        "given": [
-          "vaf",
-          "ubumlsgds",
-          "ubumrz"
-        ],
-        "expected": ""
-      },
-      {
-        "given": [
-          "cpe",
-          "qhqkwags",
-          "qhqkrcj",
-          "qhqkuqzsw"
-        ],
-        "expected": ""
-      },
-      {
-        "given": [
-          "bxuex",
-          "bxucp"
-        ],
-        "expected": "bxu"
-      },
-      {
-        "given": [
-          "cvpfjs",
-          "cvpcepe",
-          "cvpshd",
-          "eat",
-          "cvpoof"
-        ],
-        "expected": ""
-      },
-      {
-        "given": [
-          "sduhrbifsj",
-          "sduhripg"
-        ],
-        "expected": "sduhr"
-      },
-      {
-        "given": [
-          "ebjacmssae",
-          "hbs"
-        ],
-        "expected": ""
-      },
-      {
-        "given": [
-          "lwsvmlyfpd",
-          "lwsvmjwrwj",
-          "lwsvmdlbo",
-          "lwsvmywms"
-        ],
-        "expected": "lwsvm"
-      },
-      {
-        "given": [
-          "xkcwqwgq",
-          "yzj",
-          "xkcavakd"
-        ],
-        "expected": ""
-      },
-      {
-        "given": [
-          "dkn",
-          "rutlnmm"
-        ],
-        "expected": ""
-      },
-      {
-        "given": [
-          "yia",
-          "rzrhxrl"
-        ],
-        "expected": ""
-      }
+      { "given": [["ocgkx", "ocbsr"]], "expected": "oc" },
+      { "given": [["wkjecxyg", "vzc", "wkjescyil"]], "expected": "" },
+      { "given": [["pwbisui", "pwbifml", "tpb", "pwbikerc", "pwbiggce"]], "expected": "" },
+      { "given": [["vanandd", "add", "vanykhz", "vanehncv"]], "expected": "" },
+      { "given": [["mkitbywg", "mkitbhdf", "mkitbtz", "htf", "mkitbofwup"]], "expected": "" },
+      { "given": [["gjvn", "gjyvdn", "gjvlmf", "gjpp"]], "expected": "gj" },
+      { "given": [["vijyaxm", "smw", "viwotz"]], "expected": "" },
+      { "given": [["svsncjs", "svsnmqqdk", "svsnsnmg"]], "expected": "svsn" },
+      { "given": [["oxgkg", "oxgiid", "oxgdnz", "oxgbvo"]], "expected": "oxg" },
+      { "given": [["edxruad", "edxrusi", "edxrugj", "dmx", "edxrumij"]], "expected": "" },
+      { "given": [["ixuaixk", "ixjyyr", "ixkjjg", "ixwyilc", "ixzn"]], "expected": "ix" },
+      { "given": [["btj", "ywdsnwm"]], "expected": "" },
+      { "given": [["oezwnwrp", "oezrhrl", "oezxbx", "oezoj"]], "expected": "oez" },
+      { "given": [["bfanglx", "dua", "bfaniprdh"]], "expected": "" },
+      { "given": [["jpvx", "jpfts", "mxr", "jpke", "jpwgf"]], "expected": "" },
+      { "given": [["evs", "hasaxfds"]], "expected": "" },
+      { "given": [["gjwqxxu", "gjwqxiad", "gjwqxiucsc", "gjwqxdfsit", "qok"]], "expected": "" },
+      { "given": [["asrxnlcmg", "asrxncjr", "asrxnlmhc"]], "expected": "asrxn" },
+      { "given": [["jflm", "jfgn", "jfndu", "jfljb", "jftzmzz"]], "expected": "jf" },
+      { "given": [["dpmtms", "dpmxxjji", "dpmqc", "dpmce", "dpmkn"]], "expected": "dpm" },
+      { "given": [["llk", "jeoxbqx"]], "expected": "" },
+      { "given": [["srt", "nlkb", "nlsvq", "nlzkmzk", "nlmvzs"]], "expected": "" },
+      { "given": [["bdo", "ifeipzh"]], "expected": "" },
+      { "given": [["ukdnsndo", "ukdnsvyg", "nop", "ukdnsbzy"]], "expected": "" },
+      { "given": [["hsvamixyk", "hkl", "hsvaxtfe"]], "expected": "h" },
+      { "given": [["uxjpesjzv", "uxjpyu", "uxjpkqzmw", "nue"]], "expected": "" },
+      { "given": [["gdwalb", "gdwuhvad", "ohq"]], "expected": "" },
+      { "given": [["dhvwuc", "dhvuxj", "dhvbkc", "kul"]], "expected": "" },
+      { "given": [["wmauil", "wmauhne", "wmauowq", "wmauvjsg", "wmaupdtn"]], "expected": "wmau" },
+      { "given": [["hopkvzebk", "ecj", "hopkiqy"]], "expected": "" },
+      { "given": [["muk", "lonaneqb", "lonanyxu", "lonanaei"]], "expected": "" },
+      { "given": [["cnmradm", "xqp"]], "expected": "" },
+      { "given": [["bouhobjaq", "bouhorvsa", "bouhofheg"]], "expected": "bouho" },
+      { "given": [["nixxygbmf", "nixxyqr"]], "expected": "nixxy" },
+      { "given": [["dwgco", "dwgxdoje", "dwglhnoq", "dwgzjy", "ayw"]], "expected": "" },
+      { "given": [["jlqebi", "jlqegltg", "jlqeun"]], "expected": "jlqe" },
+      { "given": [["wkfhyxwiy", "wkfhywezc", "gtl", "wkfhyzuf"]], "expected": "" },
+      { "given": [["fnzdbt", "fnztoowa", "wwq"]], "expected": "" },
+      { "given": [["chfairnsk", "ydo", "chfanit", "chfahjoa", "chfakxmf"]], "expected": "" },
+      { "given": [["dedqmjlqd", "dedqsfu", "yxr"]], "expected": "" },
+      { "given": [["vaf", "ubumlsgds", "ubumrz"]], "expected": "" },
+      { "given": [["cpe", "qhqkwags", "qhqkrcj", "qhqkuqzsw"]], "expected": "" },
+      { "given": [["bxuex", "bxucp"]], "expected": "bxu" },
+      { "given": [["cvpfjs", "cvpcepe", "cvpshd", "eat", "cvpoof"]], "expected": "" },
+      { "given": [["sduhrbifsj", "sduhripg"]], "expected": "sduhr" },
+      { "given": [["ebjacmssae", "hbs"]], "expected": "" },
+      { "given": [["lwsvmlyfpd", "lwsvmjwrwj", "lwsvmdlbo", "lwsvmywms"]], "expected": "lwsvm" },
+      { "given": [["xkcwqwgq", "yzj", "xkcavakd"]], "expected": "" },
+      { "given": [["dkn", "rutlnmm"]], "expected": "" },
+      { "given": [["yia", "rzrhxrl"]], "expected": "" }
     ]
   },
   "validParentheses": {
@@ -3952,360 +3577,60 @@
       }
     ]
   },
-  "strStr": {
+  "findIndexOfFirstOccurenceInString": {
     "tests": [
-      {
-        "given": {
-          "haystack": "veutn",
-          "needle": "u"
-        },
-        "expected": 2
-      },
-      {
-        "given": {
-          "haystack": "pafxb",
-          "needle": "hsa"
-        },
-        "expected": -1
-      },
-      {
-        "given": {
-          "haystack": "oatlkdqxe",
-          "needle": "yf"
-        },
-        "expected": -1
-      },
-      {
-        "given": {
-          "haystack": "mqu",
-          "needle": "u"
-        },
-        "expected": 2
-      },
-      {
-        "given": {
-          "haystack": "zvbyfi",
-          "needle": "pmc"
-        },
-        "expected": -1
-      },
-      {
-        "given": {
-          "haystack": "igecf",
-          "needle": "g"
-        },
-        "expected": 1
-      },
-      {
-        "given": {
-          "haystack": "onmsboi",
-          "needle": "s"
-        },
-        "expected": 3
-      },
-      {
-        "given": {
-          "haystack": "gxntqe",
-          "needle": "tqe"
-        },
-        "expected": 3
-      },
-      {
-        "given": {
-          "haystack": "prbwnmop",
-          "needle": "wn"
-        },
-        "expected": 3
-      },
-      {
-        "given": {
-          "haystack": "opunaih",
-          "needle": "qh"
-        },
-        "expected": -1
-      },
-      {
-        "given": {
-          "haystack": "tihlcqjm",
-          "needle": "sc"
-        },
-        "expected": -1
-      },
-      {
-        "given": {
-          "haystack": "tnlkqmg",
-          "needle": "esc"
-        },
-        "expected": -1
-      },
-      {
-        "given": {
-          "haystack": "ajcykng",
-          "needle": "p"
-        },
-        "expected": -1
-      },
-      {
-        "given": {
-          "haystack": "iykbcsvwfz",
-          "needle": "aq"
-        },
-        "expected": -1
-      },
-      {
-        "given": {
-          "haystack": "nbtvwul",
-          "needle": "mq"
-        },
-        "expected": -1
-      },
-      {
-        "given": {
-          "haystack": "mntvehp",
-          "needle": "veh"
-        },
-        "expected": 3
-      },
-      {
-        "given": {
-          "haystack": "cezug",
-          "needle": "nqt"
-        },
-        "expected": -1
-      },
-      {
-        "given": {
-          "haystack": "myqt",
-          "needle": "myq"
-        },
-        "expected": 0
-      },
-      {
-        "given": {
-          "haystack": "lgf",
-          "needle": "gf"
-        },
-        "expected": 1
-      },
-      {
-        "given": {
-          "haystack": "layuwopvq",
-          "needle": "jus"
-        },
-        "expected": -1
-      },
-      {
-        "given": {
-          "haystack": "wijhckaduf",
-          "needle": "r"
-        },
-        "expected": -1
-      },
-      {
-        "given": {
-          "haystack": "sphmjvlfc",
-          "needle": "t"
-        },
-        "expected": -1
-      },
-      {
-        "given": {
-          "haystack": "szawu",
-          "needle": "zaw"
-        },
-        "expected": 1
-      },
-      {
-        "given": {
-          "haystack": "giolx",
-          "needle": "p"
-        },
-        "expected": -1
-      },
-      {
-        "given": {
-          "haystack": "tefbup",
-          "needle": "x"
-        },
-        "expected": -1
-      },
-      {
-        "given": {
-          "haystack": "axwli",
-          "needle": "wli"
-        },
-        "expected": 2
-      },
-      {
-        "given": {
-          "haystack": "aohivkqtl",
-          "needle": "e"
-        },
-        "expected": -1
-      },
-      {
-        "given": {
-          "haystack": "qhkvur",
-          "needle": "tv"
-        },
-        "expected": -1
-      },
-      {
-        "given": {
-          "haystack": "rcvuxzk",
-          "needle": "cvu"
-        },
-        "expected": 1
-      },
-      {
-        "given": {
-          "haystack": "zwavoh",
-          "needle": "a"
-        },
-        "expected": 2
-      },
-      {
-        "given": {
-          "haystack": "dzwmfneb",
-          "needle": "lnh"
-        },
-        "expected": -1
-      },
-      {
-        "given": {
-          "haystack": "mgo",
-          "needle": "mg"
-        },
-        "expected": 0
-      },
-      {
-        "given": {
-          "haystack": "ztvmxciofj",
-          "needle": "h"
-        },
-        "expected": -1
-      },
-      {
-        "given": {
-          "haystack": "bajnlrm",
-          "needle": "ac"
-        },
-        "expected": -1
-      },
-      {
-        "given": {
-          "haystack": "hxsbef",
-          "needle": "hxs"
-        },
-        "expected": 0
-      },
-      {
-        "given": {
-          "haystack": "iqzvge",
-          "needle": "zn"
-        },
-        "expected": -1
-      },
-      {
-        "given": {
-          "haystack": "oamflnrz",
-          "needle": "t"
-        },
-        "expected": -1
-      },
-      {
-        "given": {
-          "haystack": "x",
-          "needle": "x"
-        },
-        "expected": 0
-      },
-      {
-        "given": {
-          "haystack": "jbumvac",
-          "needle": "ysv"
-        },
-        "expected": -1
-      },
-      {
-        "given": {
-          "haystack": "oumzsarq",
-          "needle": "oln"
-        },
-        "expected": -1
-      },
-      {
-        "given": {
-          "haystack": "jxcxazq",
-          "needle": "cxa"
-        },
-        "expected": 2
-      },
-      {
-        "given": {
-          "haystack": "jmejzjep",
-          "needle": "ejz"
-        },
-        "expected": 2
-      },
-      {
-        "given": {
-          "haystack": "kbntqurx",
-          "needle": "qs"
-        },
-        "expected": -1
-      },
-      {
-        "given": {
-          "haystack": "kozwl",
-          "needle": "koz"
-        },
-        "expected": 0
-      },
-      {
-        "given": {
-          "haystack": "xspwuoety",
-          "needle": "zfs"
-        },
-        "expected": -1
-      },
-      {
-        "given": {
-          "haystack": "ixlfbqvycj",
-          "needle": "iw"
-        },
-        "expected": -1
-      },
-      {
-        "given": {
-          "haystack": "jkbwhgqcpt",
-          "needle": "igw"
-        },
-        "expected": -1
-      },
-      {
-        "given": {
-          "haystack": "latgo",
-          "needle": "g"
-        },
-        "expected": 3
-      },
-      {
-        "given": {
-          "haystack": "zhdimgrp",
-          "needle": "ear"
-        },
-        "expected": -1
-      },
-      {
-        "given": {
-          "haystack": "wfelaq",
-          "needle": "r"
-        },
-        "expected": -1
-      }
+      { "given": ["veutn", "u"], "expected": 2 },
+      { "given": ["pafxb", "hsa"], "expected": -1 },
+      { "given": ["oatlkdqxe", "yf"], "expected": -1 },
+      { "given": ["mqu", "u"], "expected": 2 },
+      { "given": ["zvbyfi", "pmc"], "expected": -1 },
+      { "given": ["igecf", "g"], "expected": 1 },
+      { "given": ["onmsboi", "s"], "expected": 3 },
+      { "given": ["gxntqe", "tqe"], "expected": 3 },
+      { "given": ["prbwnmop", "wn"], "expected": 3 },
+      { "given": ["opunaih", "qh"], "expected": -1 },
+      { "given": ["tihlcqjm", "sc"], "expected": -1 },
+      { "given": ["tnlkqmg", "esc"], "expected": -1 },
+      { "given": ["ajcykng", "p"], "expected": -1 },
+      { "given": ["iykbcsvwfz", "aq"], "expected": -1 },
+      { "given": ["nbtvwul", "mq"], "expected": -1 },
+      { "given": ["mntvehp", "veh"], "expected": 3 },
+      { "given": ["cezug", "nqt"], "expected": -1 },
+      { "given": ["myqt", "myq"], "expected": 0 },
+      { "given": ["lgf", "gf"], "expected": 1 },
+      { "given": ["layuwopvq", "jus"], "expected": -1 },
+      { "given": ["wijhckaduf", "r"], "expected": -1 },
+      { "given": ["sphmjvlfc", "t"], "expected": -1 },
+      { "given": ["szawu", "zaw"], "expected": 1 },
+      { "given": ["giolx", "p"], "expected": -1 },
+      { "given": ["tefbup", "x"], "expected": -1 },
+      { "given": ["axwli", "wli"], "expected": 2 },
+      { "given": ["aohivkqtl", "e"], "expected": -1 },
+      { "given": ["qhkvur", "tv"], "expected": -1 },
+      { "given": ["rcvuxzk", "cvu"], "expected": 1 },
+      { "given": ["zwavoh", "a"], "expected": 2 },
+      { "given": ["dzwmfneb", "lnh"], "expected": -1 },
+      { "given": ["mgo", "mg"], "expected": 0 },
+      { "given": ["ztvmxciofj", "h"], "expected": -1 },
+      { "given": ["bajnlrm", "ac"], "expected": -1 },
+      { "given": ["hxsbef", "hxs"], "expected": 0 },
+      { "given": ["iqzvge", "zn"], "expected": -1 },
+      { "given": ["oamflnrz", "t"], "expected": -1 },
+      { "given": ["x", "x"], "expected": 0 },
+      { "given": ["jbumvac", "ysv"], "expected": -1 },
+      { "given": ["oumzsarq", "oln"], "expected": -1 },
+      { "given": ["jxcxazq", "cxa"], "expected": 2 },
+      { "given": ["jmejzjep", "ejz"], "expected": 2 },
+      { "given": ["kbntqurx", "qs"], "expected": -1 },
+      { "given": ["kozwl", "koz"], "expected": 0 },
+      { "given": ["xspwuoety", "zfs"], "expected": -1 },
+      { "given": ["ixlfbqvycj", "iw"], "expected": -1 },
+      { "given": ["jkbwhgqcpt", "igw"], "expected": -1 },
+      { "given": ["latgo", "g"], "expected": 3 },
+      { "given": ["zhdimgrp", "ear"], "expected": -1 },
+      { "given": ["wfelaq", "r"], "expected": -1 }
     ]
-  },
+  },  
   "searchInsert": {
     "tests": [
       {

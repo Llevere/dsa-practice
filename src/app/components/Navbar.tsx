@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 export default function Navbar() {
+    const [refreshing, setRefreshing] = useState(false);
+    const isLocal = process.env.NODE_ENV !== "production";
     const [isOpen, setIsOpen] = useState(false);
     const [questions, setQuestions] = useState<string[]>([]);
     const [search, setSearch] = useState('');
@@ -54,6 +56,22 @@ export default function Navbar() {
         }
     }, [isOpen]);
 
+    const refreshTests = async () => {
+        setRefreshing(true);
+        try {
+            const res = await fetch('/api/refresh-tests', { method: 'POST' });
+            const data = await res.json();
+            if (data.success) {
+                alert("✅ Test cache refreshed.");
+            } else {
+                alert("❌ Failed to refresh: " + data.error);
+            }
+        } catch (err) {
+            alert("❌ Error refreshing tests: " + err);
+        }
+        setRefreshing(false);
+    };
+
     const filtered = questions
         .filter(q =>
             q.toLowerCase().includes(search.toLowerCase()) &&
@@ -68,6 +86,15 @@ export default function Navbar() {
                     DSA Visualizer
                 </Link>
             </div>
+            {isLocal && (
+                <button
+                    onClick={refreshTests}
+                    className="btn btn-outline btn-accent mr-5"
+                    disabled={refreshing}
+                >
+                    {refreshing ? "Refreshing..." : "Force Refresh"}
+                </button>
+            )}
             <div className="flex-none relative" ref={dropdownRef}>
                 <button
                     className="btn btn-outline btn-primary"
