@@ -1,14 +1,62 @@
 import { promises as fs } from "fs";
 import path from "path";
+import redis from "./redis";
 
 type TestCase = { given: unknown; expected: unknown };
-let cachedTests: Record<string, { tests: TestCase[] }> | null = null;
+export type AllTests = Record<string, { tests: TestCase[] }>;
 
-export async function getTestsJson() {
-  if (cachedTests) return cachedTests;
+const TESTS_REDIS_KEY = "tests-json-cache";
+const TEST_NAMES_REDIS_KEY = "test-names-json-cache";
 
+export async function getTestsJson(): Promise<AllTests> {
   const filePath = path.join(process.cwd(), "public", "data", "tests.json");
+
+  if (process.env.NODE_ENV !== "production") {
+    const stats = await fs.stat(filePath);
+    const fileModifiedTime = stats.mtime.getTime();
+
+    const cacheTime = await redis.get("tests-json-cache-time");
+    if (cacheTime && parseInt(cacheTime) === fileModifiedTime) {
+      const cached = await redis.get(TESTS_REDIS_KEY);
+      if (cached) {
+        return JSON.parse(cached);
+      }
+    }
+
+    const json = await fs.readFile(filePath, "utf-8");
+    const parsed: AllTests = JSON.parse(json);
+    await redis.set(TESTS_REDIS_KEY, JSON.stringify(parsed));
+    await redis.set("tests-json-cache-time", fileModifiedTime.toString());
+    return parsed;
+  }
+
+  const cached = await redis.get(TESTS_REDIS_KEY);
+  if (cached) {
+    return JSON.parse(cached);
+  }
+
   const json = await fs.readFile(filePath, "utf-8");
-  cachedTests = JSON.parse(json);
-  return cachedTests;
+  const parsed: AllTests = JSON.parse(json);
+  await redis.set(TESTS_REDIS_KEY, JSON.stringify(parsed), "EX", 3600);
+  return parsed;
+}
+
+export async function getTestKeys(): Promise<string[]> {
+  const cachedKeys = await redis.get(TEST_NAMES_REDIS_KEY);
+  if (cachedKeys) {
+    return JSON.parse(cachedKeys);
+  }
+
+  let parsed: AllTests;
+
+  const cachedTests = await redis.get(TESTS_REDIS_KEY);
+  if (cachedTests) {
+    parsed = JSON.parse(cachedTests);
+  } else {
+    parsed = await getTestsJson();
+  }
+
+  const keys = Object.keys(parsed);
+  await redis.set(TEST_NAMES_REDIS_KEY, JSON.stringify(keys), "EX", 3600);
+  return keys;
 }

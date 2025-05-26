@@ -70,7 +70,6 @@ var solve = function (digits) {
     }
     digits[i] = 0;
   }
-    console.log(digits)
   digits.unshift(1);
   return digits;
 };`),
@@ -285,7 +284,7 @@ var solve = function(nums, target) {
  * @return {number}
  */
 var solve = function(s) {
-  const words = s.trim().split(/\s+/); 
+  const words = s.trim().split(/\\s+/); 
   return words[words.length - 1].length;
 };`),
     },

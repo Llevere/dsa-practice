@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -20,70 +19,9 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.editorHeight {
-  max-height: 35vh;
-  height: 250px;
-}
-
-.runBtn,
-.submitBtn {
-  border: 1px solid white;
-  padding: 10;
-}
-
-.submitBtn {
-  margin-left: 10px;
-}
-
-.results {
-  margin-top: 10px;
-  display: flex;
-  gap: 10px;
-}
-
-.container {
-  margin: 2.5%;
-}
-
-.questionLink {
-  color: #155dfc;
-  padding: 5px;
-  margin-left: 5px;
-}
-
-.questionLink:hover {
-  color: #193cb8
-}
-
-.searchContainer {
-  margin: 10px 0;
-
-  div {
-    border: 1px solid #d1d5db;
-    padding: 5px;
-    border-radius: 5px;
-
-    input {
-      padding: 5px;
-    }
-  }
-}
-
-
 @layer utilities {
-  .animate-fade-in {
-    animation: fade-in 0.3s ease-in-out;
-  }
-
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-      transform: translateY(-0.5rem);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  .text-balance {
+    text-wrap: balance;
   }
 }
+

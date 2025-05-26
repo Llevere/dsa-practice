@@ -1,7 +1,7 @@
 'use client';
-
 import { usePathname } from 'next/navigation';
 import Navbar from './Navbar';
+import PageTransitionWrapper from './PageTransitionWrapper';
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
     const pathname = usePathname();
@@ -9,12 +9,8 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
 
     return (
         <>
-            {!isHome && (
-                <div className="animate-fade-in">
-                    <Navbar />
-                </div>
-            )}
-            {children}
+            {!isHome && <Navbar />}
+            <PageTransitionWrapper>{children}</PageTransitionWrapper>
         </>
     );
 }
