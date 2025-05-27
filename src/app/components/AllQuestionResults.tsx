@@ -20,7 +20,6 @@ export default function AllQuestionResults({
 
     return (
         <div className="w-full mt-4 space-y-4">
-            {/* Summary Header */}
             <div className="w-full px-4 py-2 rounded-md border border-green-400 bg-green-50 text-sm text-green-700 shadow-sm flex justify-between items-center">
                 <div>
                     ✅ {passed}/{total} passed
@@ -39,7 +38,6 @@ export default function AllQuestionResults({
                 )}
             </div>
 
-            {/* Failures */}
             {failed.length > 0 && showFailed && (
                 <div className="w-full border border-red-300 bg-red-50 p-4 rounded-md shadow-sm">
                     <p className="text-red-600 font-semibold mb-4">

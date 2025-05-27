@@ -23,7 +23,7 @@ export default async function QuestionPage({
         <div className="min-h-screen bg-base-100 px-4 sm:px-6 md:px-8 py-10">
             <div className="max-w-6xl mx-auto space-y-6 ">
                 <div className="bg-base-200 border border-base-300 rounded-lg p-6 shadow-md text-center mt-5 text-base-content ">
-                    <h1 className="text-2xl font-bold text-base-content">Question</h1>
+                    <h1 className="text-2xl font-bold text-base-content">Test</h1>
                     <p className="mt-2 opacity-80">{slug}</p>
                 </div>
 

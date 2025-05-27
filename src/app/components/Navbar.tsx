@@ -130,7 +130,7 @@ export default function Navbar() {
                         aria-haspopup="true"
                         aria-expanded={isOpen}
                     >
-                        {isMobile ? 'Questions' : 'Browse Questions'}
+                        {isMobile ? 'Tests' : 'Browse Tests'}
                     </button>
 
                     <div
@@ -144,7 +144,7 @@ export default function Navbar() {
                                     type="text"
                                     value={search}
                                     onChange={(e) => setSearch(e.target.value)}
-                                    placeholder="Search questions..."
+                                    placeholder="Search tests..."
                                     className="input input-sm w-full pr-10 text-base-content placeholder:text-base-content border-base-300"
                                 />
                                 {search.length > 0 && (
