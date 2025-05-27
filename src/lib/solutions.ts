@@ -232,6 +232,28 @@ var solve = function(nums, val) {
 };`),
     },
   ],
+  majorityElement: [
+    {
+      label: "Boyer-Moore Majority Vote Algorithm",
+      code: dedent(`
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var solve = function(nums) {
+    let count = 0, majority = nums[0];
+    for(let num of nums)
+    {
+        if(count === 0)
+        {
+            majority = num;
+        }
+        count += (num === majority) ? 1 : -1;
+    }
+    return majority;
+};`),
+    },
+  ],
   findIndexOfFirstOccurenceInString: [
     {
       label: "Index of",
