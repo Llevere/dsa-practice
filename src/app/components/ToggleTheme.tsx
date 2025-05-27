@@ -1,10 +1,13 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useIsMobile } from '@/hooks/useIsMobile';
 
 export default function ToggleTheme() {
     const [theme, setTheme] = useState<'light' | 'business'>('light');
     const [mounted, setMounted] = useState(false);
+
+    const isMobile = useIsMobile();
 
     useEffect(() => {
         const stored = localStorage.getItem('theme') as 'light' | 'business' | null;
@@ -27,12 +30,14 @@ export default function ToggleTheme() {
 
     return (
         <button
-            className={`btn font-medium transition-colors duration-150 ${isDark ? 'btn-outline btn-warning' : 'btn-outline btn-neutral'
+            className={`btn font-medium btn-sm transition-colors duration-150 ${isDark ? 'btn-outline btn-warning' : 'btn-outline btn-neutral'
                 }`}
             onClick={toggleTheme}
             aria-label="Toggle Theme"
         >
-            {isDark ? '🌞 Light' : '🌙 Dark'}
+            {isMobile ?
+                isDark ? '🌞' : '🌙' :
+                isDark ? '🌞 Light' : '🌙 Dark'}
         </button>
 
     );

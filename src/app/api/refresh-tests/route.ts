@@ -1,4 +1,3 @@
-// src/app/api/refresh-tests/route.ts
 import { NextResponse } from "next/server";
 import { getTestsJson } from "@/lib/loadTests";
 
