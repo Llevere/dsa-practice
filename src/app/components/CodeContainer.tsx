@@ -34,11 +34,12 @@ type SubmissionSummary = {
 
 type Props = {
     tests: TestCase[];
+    spreadable: boolean,
     solutions: SolutionObject[];
     testId: string;
 };
 
-export default function CodeContainer({ tests, solutions, testId }: Props) {
+export default function CodeContainer({ tests, spreadable, solutions, testId }: Props) {
     const [mounted, setMounted] = useState(false);
     const [results, setResults] = useState<Record<number, QuestionResult[]>>({});
     const [loadingIndex, setLoadingIndex] = useState<number | null>(null);
@@ -63,6 +64,7 @@ export default function CodeContainer({ tests, solutions, testId }: Props) {
             const res = await axios.post("/api/run", {
                 code,
                 tests,
+                spreadable
             });
             setResults((prev) => ({ ...prev, [index]: res.data.results }));
         } catch (err) {

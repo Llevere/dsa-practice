@@ -4,10 +4,10 @@ import { runAllTests } from "@/utils/executeAllTests";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).end();
 
-  const { code, tests } = req.body;
+  const { code, tests, spreadable } = req.body;
 
   try {
-    const results = runAllTests(code, tests);
+    const results = runAllTests(code, tests, spreadable);
     res.status(200).json({ results });
   } catch (err) {
     const message = err instanceof Error ? err.message : "Unknown error";

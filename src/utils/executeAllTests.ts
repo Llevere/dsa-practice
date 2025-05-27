@@ -11,9 +11,17 @@ type QuestionResult = {
   pass: boolean;
 };
 
-export function runAllTests(code: string, tests: TestCase[]): QuestionResult[] {
+export function runAllTests(
+  code: string,
+  tests: TestCase[],
+  spreadable: boolean
+): QuestionResult[] {
   return tests.map((test) => {
-    const { result, logs, error, timeMs } = runSingleTest(code, test);
+    const { result, logs, error, timeMs } = runSingleTest(
+      code,
+      test,
+      spreadable
+    );
     const pass =
       !error && JSON.stringify(result) === JSON.stringify(test.expected);
     return {

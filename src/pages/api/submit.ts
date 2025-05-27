@@ -18,7 +18,7 @@ export default async function handler(
       return res.status(400).json({ error: `No tests found for ${testId}` });
     }
 
-    const results = runAllTests(code, question.tests);
+    const results = runAllTests(code, question.tests, question.spreadable);
     const passed = results.filter((r) => r.pass).length;
     const failed = results
       .filter((r) => !r.pass)

@@ -3,13 +3,18 @@ import path from "path";
 import redis from "./redis";
 
 type TestCase = { given: unknown; expected: unknown };
-export type AllTests = Record<string, { tests: TestCase[] }>;
+export type AllTests = Record<
+  string,
+  { tests: TestCase[]; spreadable: boolean }
+>;
 
 const TESTS_REDIS_KEY = "tests-json-cache";
 const TEST_NAMES_REDIS_KEY = "test-names-json-cache";
 
+const TEST_NAME = "tests_spread.json";
+
 export async function getTestsJson(forceRefresh = false): Promise<AllTests> {
-  const filePath = path.join(process.cwd(), "public", "data", "tests.json");
+  const filePath = path.join(process.cwd(), "public", "data", TEST_NAME);
 
   if (forceRefresh) {
     const json = await fs.readFile(filePath, "utf-8");

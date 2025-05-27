@@ -17,6 +17,7 @@ export default async function QuestionPage({
     }
 
     const tests = question.tests.slice(0, 3);
+    const spreadable = question.spreadable;
     const solutions = defaultSolutions[slug] || [];
 
     return (
@@ -29,7 +30,7 @@ export default async function QuestionPage({
 
                 <div className="min-h-screen bg-base-100 px-4 sm:px-6 md:px-8 py-10">
                     <div className="max-w-6xl mx-auto space-y-6">
-                        <CodeContainer tests={tests} solutions={solutions} testId={slug} />
+                        <CodeContainer tests={tests} spreadable={spreadable} solutions={solutions} testId={slug} />
                     </div>
                 </div>
             </div>
