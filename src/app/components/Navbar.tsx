@@ -130,7 +130,7 @@ export default function Navbar() {
                         aria-haspopup="true"
                         aria-expanded={isOpen}
                     >
-                        {isMobile ? 'Q' : 'Browse Questions'}
+                        {isMobile ? 'Questions' : 'Browse Questions'}
                     </button>
 
                     <div
