@@ -4419,106 +4419,8 @@
   "searchInsert": {
     "tests": [
       {
-        "given": {
-          "nums": [
-            20,
-            25,
-            26,
-            32,
-            33
-          ],
-          "target": 13
-        },
-        "expected": 0
-      },
-      {
-        "given": {
-          "nums": [
-            5,
-            12,
-            16,
-            21,
-            31,
-            43,
-            44,
-            47
-          ],
-          "target": 12
-        },
-        "expected": 1
-      },
-      {
-        "given": {
-          "nums": [
-            15,
-            31,
-            33,
-            42,
-            44
-          ],
-          "target": 6
-        },
-        "expected": 0
-      },
-      {
-        "given": {
-          "nums": [
-            0,
-            1,
-            21,
-            25,
-            27,
-            29,
-            46
-          ],
-          "target": 14
-        },
-        "expected": 2
-      },
-      {
-        "given": {
-          "nums": [
-            3,
-            6,
-            10,
-            16,
-            25,
-            26,
-            42,
-            48
-          ],
-          "target": 32
-        },
-        "expected": 6
-      },
-      {
-        "given": {
-          "nums": [
-            21,
-            29,
-            43,
-            44
-          ],
-          "target": 3
-        },
-        "expected": 0
-      },
-      {
-        "given": {
-          "nums": [
-            5,
-            18,
-            23,
-            38,
-            39
-          ],
-          "target": 5
-        },
-        "expected": 0
-      },
-      {
-        "given": {
-          "nums": [
+        "given": [
+          [
             1,
             5,
             7,
@@ -4528,24 +4430,122 @@
             23,
             42
           ],
-          "target": 38
-        },
+          38
+        ],
         "expected": 7
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
+            20,
+            25,
+            26,
+            32,
+            33
+          ],
+          13
+        ],
+        "expected": 0
+      },
+      {
+        "given": [
+          [
+            5,
+            12,
+            16,
+            21,
+            31,
+            43,
+            44,
+            47
+          ],
+          12
+        ],
+        "expected": 1
+      },
+      {
+        "given": [
+          [
+            15,
+            31,
+            33,
+            42,
+            44
+          ],
+          6
+        ],
+        "expected": 0
+      },
+      {
+        "given": [
+          [
+            0,
+            1,
+            21,
+            25,
+            27,
+            29,
+            46
+          ],
+          14
+        ],
+        "expected": 2
+      },
+      {
+        "given": [
+          [
+            3,
+            6,
+            10,
+            16,
+            25,
+            26,
+            42,
+            48
+          ],
+          32
+        ],
+        "expected": 6
+      },
+      {
+        "given": [
+          [
+            21,
+            29,
+            43,
+            44
+          ],
+          3
+        ],
+        "expected": 0
+      },
+      {
+        "given": [
+          [
+            5,
+            18,
+            23,
+            38,
+            39
+          ],
+          5
+        ],
+        "expected": 0
+      },
+      {
+        "given": [
+          [
             2,
             16,
             45
           ],
-          "target": 22
-        },
+          22
+        ],
         "expected": 2
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             1,
             2,
             14,
@@ -4555,49 +4555,49 @@
             38,
             45
           ],
-          "target": 1
-        },
+          1
+        ],
         "expected": 0
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             1,
             28,
             35
           ],
-          "target": 8
-        },
+          8
+        ],
         "expected": 1
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             3,
             5,
             14,
             15,
             40
           ],
-          "target": 20
-        },
+          20
+        ],
         "expected": 4
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             12,
             18,
             20,
             39
           ],
-          "target": 17
-        },
+          17
+        ],
         "expected": 1
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             1,
             3,
             11,
@@ -4605,13 +4605,13 @@
             26,
             38
           ],
-          "target": 37
-        },
+          37
+        ],
         "expected": 5
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             8,
             11,
             13,
@@ -4620,39 +4620,39 @@
             31,
             41
           ],
-          "target": 22
-        },
+          22
+        ],
         "expected": 4
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             1,
             27,
             28,
             35,
             36
           ],
-          "target": 30
-        },
+          30
+        ],
         "expected": 3
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             8,
             12,
             18,
             24,
             45
           ],
-          "target": 4
-        },
+          4
+        ],
         "expected": 0
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             5,
             29,
             33,
@@ -4660,13 +4660,13 @@
             39,
             49
           ],
-          "target": 42
-        },
+          42
+        ],
         "expected": 5
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             9,
             16,
             17,
@@ -4676,13 +4676,13 @@
             39,
             47
           ],
-          "target": 24
-        },
+          24
+        ],
         "expected": 4
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             11,
             33,
             35,
@@ -4690,13 +4690,13 @@
             45,
             48
           ],
-          "target": 15
-        },
+          15
+        ],
         "expected": 1
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             13,
             30,
             35,
@@ -4706,35 +4706,35 @@
             48,
             49
           ],
-          "target": 31
-        },
+          31
+        ],
         "expected": 2
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             23,
             26,
             35
           ],
-          "target": 12
-        },
+          12
+        ],
         "expected": 0
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             3,
             13,
             14
           ],
-          "target": 24
-        },
+          24
+        ],
         "expected": 3
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             6,
             10,
             17,
@@ -4742,13 +4742,13 @@
             34,
             40
           ],
-          "target": 29
-        },
+          29
+        ],
         "expected": 4
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             6,
             22,
             27,
@@ -4757,38 +4757,38 @@
             40,
             41
           ],
-          "target": 13
-        },
+          13
+        ],
         "expected": 1
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             13,
             21,
             29,
             35,
             36
           ],
-          "target": 28
-        },
+          28
+        ],
         "expected": 2
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             11,
             39,
             40,
             47
           ],
-          "target": 46
-        },
+          46
+        ],
         "expected": 3
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             14,
             16,
             17,
@@ -4798,26 +4798,26 @@
             37,
             42
           ],
-          "target": 3
-        },
+          3
+        ],
         "expected": 0
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             4,
             5,
             9,
             10,
             22
           ],
-          "target": 29
-        },
+          29
+        ],
         "expected": 5
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             1,
             5,
             7,
@@ -4826,13 +4826,13 @@
             41,
             43
           ],
-          "target": 43
-        },
+          43
+        ],
         "expected": 6
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             1,
             7,
             14,
@@ -4841,13 +4841,13 @@
             35,
             48
           ],
-          "target": 27
-        },
+          27
+        ],
         "expected": 4
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             1,
             2,
             12,
@@ -4856,25 +4856,25 @@
             37,
             43
           ],
-          "target": 13
-        },
+          13
+        ],
         "expected": 3
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             9,
             19,
             31,
             43
           ],
-          "target": 11
-        },
+          11
+        ],
         "expected": 1
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             4,
             6,
             25,
@@ -4884,26 +4884,26 @@
             35,
             39
           ],
-          "target": 39
-        },
+          39
+        ],
         "expected": 7
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             11,
             24,
             32,
             35,
             48
           ],
-          "target": 33
-        },
+          33
+        ],
         "expected": 3
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             10,
             16,
             29,
@@ -4911,25 +4911,25 @@
             45,
             48
           ],
-          "target": 36
-        },
+          36
+        ],
         "expected": 4
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             8,
             20,
             24,
             40
           ],
-          "target": 14
-        },
+          14
+        ],
         "expected": 1
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             3,
             13,
             14,
@@ -4939,24 +4939,24 @@
             46,
             49
           ],
-          "target": 49
-        },
+          49
+        ],
         "expected": 7
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             19,
             38,
             40
           ],
-          "target": 19
-        },
+          19
+        ],
         "expected": 0
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             4,
             5,
             10,
@@ -4966,13 +4966,13 @@
             38,
             44
           ],
-          "target": 23
-        },
+          23
+        ],
         "expected": 5
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             17,
             28,
             31,
@@ -4980,38 +4980,38 @@
             33,
             47
           ],
-          "target": 33
-        },
+          33
+        ],
         "expected": 4
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             12,
             23,
             30,
             49
           ],
-          "target": 7
-        },
+          7
+        ],
         "expected": 0
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             2,
             14,
             16,
             42,
             48
           ],
-          "target": 39
-        },
+          39
+        ],
         "expected": 3
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             13,
             16,
             19,
@@ -5020,13 +5020,13 @@
             36,
             39
           ],
-          "target": 33
-        },
+          33
+        ],
         "expected": 4
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             7,
             11,
             14,
@@ -5035,13 +5035,13 @@
             38,
             39
           ],
-          "target": 46
-        },
+          46
+        ],
         "expected": 7
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             14,
             17,
             25,
@@ -5051,25 +5051,25 @@
             44,
             49
           ],
-          "target": 48
-        },
+          48
+        ],
         "expected": 7
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             5,
             6,
             24,
             35
           ],
-          "target": 13
-        },
+          13
+        ],
         "expected": 2
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             0,
             2,
             7,
@@ -5077,13 +5077,13 @@
             35,
             45
           ],
-          "target": 30
-        },
+          30
+        ],
         "expected": 4
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             20,
             27,
             32,
@@ -5091,13 +5091,13 @@
             39,
             40
           ],
-          "target": 45
-        },
+          45
+        ],
         "expected": 6
       },
       {
-        "given": {
-          "nums": [
+        "given": [
+          [
             1,
             3,
             11,
@@ -5106,12 +5106,12 @@
             32,
             45
           ],
-          "target": 26
-        },
+          26
+        ],
         "expected": 5
       }
     ],
-    "spreadable": false
+    "spreadable": true
   },
   "lengthOfLastWord": {
     "tests": [

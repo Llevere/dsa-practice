@@ -246,7 +246,7 @@ var solve = function(haystack, needle) {
 };`),
     },
   ],
-  searchInsertPosition: [
+  searchInsert: [
     {
       label: "Binary search",
       code: dedent(`
