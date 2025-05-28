@@ -15,12 +15,5 @@ export const defaultSqlSolutions: SqlSolutionMap = {
         SELECT name FROM Users WHERE active = 1;
       `),
     },
-    {
-      label: "With WHERE Filter",
-      code: dedent(`
-        SELECT name FROM Users
-        WHERE active = 1;
-      `),
-    },
   ],
 };
