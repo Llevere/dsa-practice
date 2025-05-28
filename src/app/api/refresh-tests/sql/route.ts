@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
-import { getTestsJson } from "@/lib/loadTests";
+import { getSQLTestsJson } from "@/lib/loadTests";
 
 export async function POST() {
   try {
-    const tests = await getTestsJson(true);
+    const tests = await getSQLTestsJson(true);
     return NextResponse.json({
       success: true,
       message: "Tests refreshed",

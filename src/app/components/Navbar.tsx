@@ -4,11 +4,11 @@ import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import ToggleTheme from './ToggleTheme';
 import { useIsMobile } from "@/hooks/useIsMobile"
-export default function Navbar() {
+import { QuestionKey } from '../types/QuestionKey';
+export default function Navbar({ testKeys }: { testKeys: QuestionKey[] }) {
     const [refreshing, setRefreshing] = useState(false);
     const isLocal = process.env.NODE_ENV !== 'production';
     const [isOpen, setIsOpen] = useState(false);
-    const [questions, setQuestions] = useState<string[]>([]);
     const [search, setSearch] = useState('');
     const dropdownRef = useRef<HTMLDivElement | null>(null);
     const inputRef = useRef<HTMLInputElement | null>(null);
@@ -17,15 +17,6 @@ export default function Navbar() {
     const isHome = pathname === '/';
 
     const isMobile = useIsMobile();
-
-    useEffect(() => {
-        const fetchKeys = async () => {
-            const res = await fetch('/api/test-keys');
-            const data = await res.json();
-            setQuestions(data);
-        };
-        fetchKeys();
-    }, []);
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -60,7 +51,7 @@ export default function Navbar() {
 
     const debounceRef = useRef<NodeJS.Timeout | null>(null);
 
-    const refreshTests = async () => {
+    const refreshTestsJS = async () => {
         if (debounceRef.current) return;
         debounceRef.current = setTimeout(() => {
             debounceRef.current = null;
@@ -68,18 +59,36 @@ export default function Navbar() {
 
         setRefreshing(true);
         try {
-            const res = await fetch('/api/refresh-tests', { method: 'POST' });
+
+            const res = await fetch('/api/refresh-tests/js', { method: 'POST' });
             const data = await res.json();
-            alert(data.success ? '✅ Test cache refreshed.' : `❌ Failed: ${data.error}`);
+            alert(data.success ? '✅ JS Test cache refreshed.' : `❌ Failed: ${data.error}`);
         } catch (err) {
             alert('❌ Error: ' + err);
         }
         setRefreshing(false);
     };
 
-    const filtered = questions
-        .filter((q) => q.toLowerCase().includes(search.toLowerCase()) && `/${q}` !== pathname)
-        .sort((a, b) => a.localeCompare(b));
+    const refreshTestsSQL = async () => {
+        if (debounceRef.current) return;
+        debounceRef.current = setTimeout(() => {
+            debounceRef.current = null;
+        }, 1000);
+
+        setRefreshing(true);
+        try {
+
+            const res = await fetch('/api/refresh-tests/sql', { method: 'POST' });
+            const data = await res.json();
+            alert(data.success ? '✅ SQL Test cache refreshed.' : `❌ Failed: ${data.error}`);
+        } catch (err) {
+            alert('❌ Error: ' + err);
+        }
+        setRefreshing(false);
+    };
+    const filtered = testKeys
+        .filter(({ slug }) => slug.toLowerCase().includes(search.toLowerCase()) && `/${slug}` !== pathname)
+        .sort((a, b) => a.slug.localeCompare(b.slug));
 
     return (
         <div className="navbar bg-base-100 shadow gap-2 sm:gap-4 px-2 sm:px-4">
@@ -99,7 +108,7 @@ export default function Navbar() {
                 {isLocal && (
                     isMobile ? (
                         <button
-                            onClick={refreshTests}
+                            onClick={refreshTestsJS}
                             className="btn btn-sm btn-outline btn-accent"
                             data-tip="Refresh"
                             disabled={refreshing}
@@ -107,16 +116,40 @@ export default function Navbar() {
                             {refreshing ? (
                                 <span className="loading loading-spinner loading-sm" />
                             ) : (
-                                "R"
+                                "R-JS"
                             )}
                         </button>
                     ) : (
                         <button
-                            onClick={refreshTests}
+                            onClick={refreshTestsJS}
                             className="btn btn-outline btn-accent btn-sm"
                             disabled={refreshing}
                         >
-                            {refreshing ? "Refreshing..." : "Force Refresh"}
+                            {refreshing ? "Refreshing..." : "Refresh JS Tests"}
+                        </button>
+                    )
+                )}
+                {isLocal && (
+                    isMobile ? (
+                        <button
+                            onClick={refreshTestsSQL}
+                            className="btn btn-sm btn-outline btn-accent"
+                            data-tip="Refresh"
+                            disabled={refreshing}
+                        >
+                            {refreshing ? (
+                                <span className="loading loading-spinner loading-sm" />
+                            ) : (
+                                "R-SQL"
+                            )}
+                        </button>
+                    ) : (
+                        <button
+                            onClick={refreshTestsSQL}
+                            className="btn btn-outline btn-accent btn-sm"
+                            disabled={refreshing}
+                        >
+                            {refreshing ? "Refreshing..." : "Refresh SQL Tests"}
                         </button>
                     )
                 )}
@@ -161,14 +194,14 @@ export default function Navbar() {
                         </div>
 
                         <ul className="max-h-64 overflow-y-auto p-3 space-y-1">
-                            {filtered.map((q) => (
-                                <li key={q}>
+                            {filtered.map(({ slug }) => (
+                                <li key={slug}>
                                     <Link
-                                        href={`/${q}`}
+                                        href={`/${slug}`}
                                         className="block px-3 py-2 rounded hover:bg-base-300 hover:text-base-content transition-colors duration-200"
                                         onClick={() => setIsOpen(false)}
                                     >
-                                        {q}
+                                        {slug}
                                     </Link>
                                 </li>
                             ))}

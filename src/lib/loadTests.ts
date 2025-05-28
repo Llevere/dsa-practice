@@ -1,55 +1,69 @@
 import { promises as fs } from "fs";
 import path from "path";
 import redis from "./redis";
+import { SQLTests, JSTests } from "@/app/types/AllTests";
+import {
+  jsKey,
+  sqlKey,
+  mergedNamesKey,
+  jsTestFileName,
+  sqlTestFileName,
+} from "../../config";
 
-type TestCase = { given: unknown; expected: unknown };
-export type AllTests = Record<
-  string,
-  { tests: TestCase[]; spreadable: boolean }
->;
-
-const TESTS_REDIS_KEY = "tests-json-cache";
-const TEST_NAMES_REDIS_KEY = "test-names-json-cache";
-
-const TEST_NAME = "tests_spread.json";
-
-export async function getTestsJson(forceRefresh = false): Promise<AllTests> {
-  const filePath = path.join(process.cwd(), "public", "data", TEST_NAME);
+export async function getJSTestsJson(forceRefresh = false): Promise<JSTests> {
+  const filePath = path.join(process.cwd(), "public", "data", jsTestFileName);
 
   if (forceRefresh) {
     const json = await fs.readFile(filePath, "utf-8");
-    const parsed: AllTests = JSON.parse(json);
-    await redis.set(TESTS_REDIS_KEY, JSON.stringify(parsed), "EX", 3600);
+    const parsed: JSTests = JSON.parse(json);
+    await redis.set(jsKey, JSON.stringify(parsed), "EX", 3600);
     return parsed;
   }
 
-  const cached = await redis.get(TESTS_REDIS_KEY);
+  const cached = await redis.get(jsKey);
   if (cached) {
     return JSON.parse(cached);
   }
 
   const json = await fs.readFile(filePath, "utf-8");
-  const parsed: AllTests = JSON.parse(json);
-  await redis.set(TESTS_REDIS_KEY, JSON.stringify(parsed), "EX", 3600);
+  const parsed: JSTests = JSON.parse(json);
+  await redis.set(jsKey, JSON.stringify(parsed), "EX", 3600);
   return parsed;
 }
 
-export async function getTestKeys(): Promise<string[]> {
-  const cachedKeys = await redis.get(TEST_NAMES_REDIS_KEY);
-  if (cachedKeys) {
-    return JSON.parse(cachedKeys);
+export async function getSQLTestsJson(forceRefresh = false): Promise<SQLTests> {
+  const filePath = path.join(process.cwd(), "public", "data", sqlTestFileName);
+
+  if (forceRefresh) {
+    const json = await fs.readFile(filePath, "utf-8");
+    const parsed: SQLTests = JSON.parse(json);
+    await redis.set(sqlKey, JSON.stringify(parsed), "EX", 3600);
+    return parsed;
   }
 
-  let parsed: AllTests;
+  const cached = await redis.get(sqlKey);
+  if (cached) return JSON.parse(cached);
 
-  const cachedTests = await redis.get(TESTS_REDIS_KEY);
-  if (cachedTests) {
-    parsed = JSON.parse(cachedTests);
-  } else {
-    parsed = await getTestsJson();
-  }
+  const json = await fs.readFile(filePath, "utf-8");
+  const parsed: SQLTests = JSON.parse(json);
+  await redis.set(sqlKey, JSON.stringify(parsed), "EX", 3600);
+  return parsed;
+}
 
-  const keys = Object.keys(parsed);
-  await redis.set(TEST_NAMES_REDIS_KEY, JSON.stringify(keys), "EX", 3600);
+export async function getTypedTestKeys(): Promise<
+  { slug: string; type: "js" | "sql" }[]
+> {
+  const cached = await redis.get(mergedNamesKey);
+  if (cached) return JSON.parse(cached);
+
+  const js = await getJSTestsJson();
+  const sql = await getSQLTestsJson();
+
+  const keys = [
+    ...Object.keys(js).map((slug) => ({ slug, type: "js" as const })),
+    ...Object.keys(sql).map((slug) => ({ slug, type: "sql" as const })),
+  ];
+
+  await redis.set(mergedNamesKey, JSON.stringify(keys), "EX", 3600);
   return keys;
 }

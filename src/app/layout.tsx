@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { getTypedTestKeys } from '@/lib/loadTests';
+import { QuestionKey } from './types/QuestionKey';
 import Navbar from "./components/Navbar";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -17,12 +19,12 @@ export const metadata: Metadata = {
   title: 'DSA Practice',
   description: 'Practice common data structure and algorithm problems interactively.',
 };
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const testKeys: QuestionKey[] = await getTypedTestKeys();
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Navbar />
+        <Navbar testKeys={testKeys} />
         {children}
       </body>
     </html>

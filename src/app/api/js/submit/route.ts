@@ -1,21 +1,19 @@
-import type { NextApiRequest, NextApiResponse } from "next";
+import { NextRequest, NextResponse } from "next/server";
 import { getJSTestsJson } from "@/lib/loadTests";
 import { runAllTests } from "@/utils/executeAllTests";
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  if (req.method !== "POST") return res.status(405).end();
-
-  const { code, testId } = req.body;
-
+export async function POST(req: NextRequest) {
   try {
+    const { code, testId } = await req.json();
+
     const allTests = await getJSTestsJson();
     const question = allTests[testId];
 
     if (!question || !Array.isArray(question.tests)) {
-      return res.status(400).json({ error: `No tests found for ${testId}` });
+      return NextResponse.json(
+        { error: `No tests found for ${testId}` },
+        { status: 400 }
+      );
     }
 
     const results = runAllTests(code, question.tests, question.spreadable);
@@ -30,7 +28,7 @@ export default async function handler(
     const avgTime =
       results.reduce((acc, r) => acc + r.timeMs, 0) / results.length;
 
-    res.status(200).json({
+    return NextResponse.json({
       passed,
       failed,
       total: results.length,
@@ -38,6 +36,6 @@ export default async function handler(
     });
   } catch (err) {
     const message = err instanceof Error ? err.message : "Unknown error";
-    res.status(500).json({ error: message });
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }

@@ -8,6 +8,38 @@ export type SolutionObject = {
 export type SolutionMap = Record<string, SolutionObject[]>;
 
 export const defaultSolutions: SolutionMap = {
+  excelSheetColumnNumber: [
+    {
+      label: "Reduce",
+      code: dedent(`
+/**
+ * @param {string} columnTitle
+ * @return {number}
+ */
+var solve = function (columnTitle) {
+    return columnTitle
+        .split("")
+        .reduce((acc, curr, i) => {
+            return acc + (curr.charCodeAt(0) - 64) * Math.pow(26, columnTitle.length - 1 - i);
+        }, 0);
+};`),
+    },
+    {
+      label: "For loop",
+      code: dedent(`
+/**
+ * @param {string} columnTitle
+ * @return {number}
+ */
+var solve = function (columnTitle) {
+  let total = 0;
+  for (let i = 0; i < columnTitle.length; i++) {
+    total = total * 26 + columnTitle.charCodeAt(i) - 64;
+  }
+  return total;
+};`),
+    },
+  ],
   sumOfNums: [
     {
       label: "Reduce",
