@@ -15,7 +15,7 @@ export default function DescriptionSection({ question }: Props) {
             <CollapseCard title="Problem Description" defaultOpen={true}>
                 <div className="max-h-[60vh] overflow-y-auto pr-2">
                     <p className="text-sm opacity-90 leading-relaxed whitespace-pre-line mb-3">
-                        {question.description ?? "No description available"}
+                        {question.description ?? "No description available (Working on implementing SQL functionality at the moment)"}
                     </p>
 
                     {"schema" in question && question.schema?.length > 0 && (
