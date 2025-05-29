@@ -25,7 +25,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang="en" data-theme="business">
       <head>
-        <script
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `
       (function() {
@@ -37,7 +37,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       })();
     `,
           }}
-        />
+        /> */}
 
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
