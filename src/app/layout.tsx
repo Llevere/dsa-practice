@@ -4,6 +4,7 @@ import "./globals.css";
 import { getTypedTestKeys } from '@/lib/loadTests';
 import { QuestionKey } from './types/QuestionKey';
 import Navbar from "./components/Navbar";
+import ThemeInitializer from './components/ThemeInitializer';
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const testKeys: QuestionKey[] = await getTypedTestKeys();
   return (
-    <html lang="en" suppressHydrationWarning data-theme="business">
+    <html lang="en" suppressHydrationWarning >
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -39,6 +40,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <ThemeInitializer />
         <Navbar testKeys={testKeys} />
         {children}
       </body>
