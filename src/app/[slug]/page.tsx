@@ -37,7 +37,7 @@ export default async function QuestionPage({
                         </div>
                     </div>
 
-                    <div className="lg:w-2/3 h-full">
+                    <div className="lg:w-2/3 h-full flex-1">
                         {type === "js" && "spreadable" in question && (
                             <JSContainer
                                 tests={question.tests.slice(0, 3)}
