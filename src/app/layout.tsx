@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const testKeys: QuestionKey[] = await getTypedTestKeys();
   return (
-    <html lang="en" data-theme="light">
+    <html lang="en" data-theme="business">
       <head>
         <script
           dangerouslySetInnerHTML={{
