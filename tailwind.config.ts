@@ -15,6 +15,12 @@ const config: Config = {
         "fade-in-up": "fade-in-up 0.3s ease-out",
       },
     },
+    colors: {
+      sqlblue: {
+        light: "#2563eb",
+        dark: "#60a5fa",
+      },
+    },
   },
   plugins: [daisyui],
   daisyui: {

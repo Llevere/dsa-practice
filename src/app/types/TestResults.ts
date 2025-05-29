@@ -20,10 +20,3 @@ export type SubmissionSummary = {
   total: number;
   avgTime: number;
 };
-export type SqlTestResult = {
-  query: string;
-  expected: unknown;
-  actual: unknown[];
-  pass: boolean;
-  error?: string;
-};

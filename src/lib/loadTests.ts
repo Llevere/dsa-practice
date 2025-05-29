@@ -50,9 +50,21 @@ export async function getSQLTestsJson(forceRefresh = false): Promise<SQLTests> {
   return parsed;
 }
 
-export async function getTypedTestKeys(): Promise<
-  { slug: string; type: "js" | "sql" }[]
-> {
+export async function getTypedTestKeys(
+  forceRefresh = false
+): Promise<{ slug: string; type: "js" | "sqlite" }[]> {
+  if (forceRefresh) {
+    const js = await getJSTestsJson();
+    const sql = await getSQLTestsJson();
+
+    const keys = [
+      ...Object.keys(js).map((slug) => ({ slug, type: "js" as const })),
+      ...Object.keys(sql).map((slug) => ({ slug, type: "sqlite" as const })),
+    ];
+
+    await redis.set(mergedNamesKey, JSON.stringify(keys), "EX", 3600);
+    return keys;
+  }
   const cached = await redis.get(mergedNamesKey);
   if (cached) return JSON.parse(cached);
 
@@ -61,7 +73,7 @@ export async function getTypedTestKeys(): Promise<
 
   const keys = [
     ...Object.keys(js).map((slug) => ({ slug, type: "js" as const })),
-    ...Object.keys(sql).map((slug) => ({ slug, type: "sql" as const })),
+    ...Object.keys(sql).map((slug) => ({ slug, type: "sqlite" as const })),
   ];
 
   await redis.set(mergedNamesKey, JSON.stringify(keys), "EX", 3600);

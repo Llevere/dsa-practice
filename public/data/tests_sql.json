@@ -1,18 +1,78 @@
 {
-    "findActiveUsers": {
-        "sql": true,
-        "schema": [
-          "CREATE TABLE Users (id INTEGER, name TEXT, active INTEGER);"
-        ],
-        "data": [
-          "INSERT INTO Users VALUES (1, 'Alice', 1);",
-          "INSERT INTO Users VALUES (2, 'Bob', 0);"
-        ],
-        "tests": [
+  "findActiveUsers": {
+      "description": "Write a SQL query to find all active users from the Users table.",
+      "schema": [
+        "CREATE TABLE If Not Exists Users (id int, name TEXT, active int);"
+      ],
+      "data": [
+        "INSERT INTO Users VALUES (1, 'Alice', 1);",
+        "INSERT INTO Users VALUES (2, 'Bob', 0);"
+      ],
+      "tests": [
+        {
+          "queries": [
+        {
+          "columns": ["name"],
+          "expected": [["Alice"]]
+        }
+      ]
+        }
+      ]
+    },
+    "customersWhoNeverOrder": {
+      "description": "Write a solution to find all customers who never order anything.\n\nReturn the result table in any order.\n\n Output column name should be 'Customers'",
+      "schema": [
+        "Create table If Not Exists Customers (id int, name varchar(255))",
+        "Create table If Not Exists Orders (id int, customerId int)"
+      ],
+      "data": [
+        "DELETE FROM Customers;",
+        "insert into Customers (id, name) values ('1', 'Joe')",
+        "insert into Customers (id, name) values ('2', 'Henry')",
+        "insert into Customers (id, name) values ('3', 'Sam')",
+        "insert into Customers (id, name) values ('4', 'Max')",
+        "DELETE FROM Orders;",
+        "insert into Orders (id, customerId) values ('1', '3')",
+        "insert into Orders (id, customerId) values ('2', '1')"
+      ],
+      "tests": [
+        {
+          "queries": [
           {
-            "query": "SELECT name FROM Users WHERE active = 1;",
-            "expected": [["Alice"]]
+            "columns": ["Customers"],
+            "expected": [["Henry"], ["Max"]]
           }
         ]
-      }
+        }
+      ]
+    },
+    "customerProductOrders": {
+      "description": "Write a solutuion to grab the order id's, customer name, and product name. \n\nColumns should be, in any order, 'OrderID', 'Customer', 'Product'",
+      "schema": [
+        "CREATE TABLE if not exists Customers (id INT, name TEXT);",
+        "CREATE TABLE if not exists Products (id INT, name TEXT);",
+        "CREATE TABLE if not exists Orders (id INT, customerId INT, productId INT);"
+      ],
+      "data": [
+        "INSERT INTO Customers VALUES (1, 'Alice');",
+        "INSERT INTO Customers VALUES (2, 'Bob');",
+        "INSERT INTO Products VALUES (1, 'Keyboard');",
+        "INSERT INTO Products VALUES (2, 'Monitor');",
+        "INSERT INTO Orders VALUES (1, 1, 1);",
+        "INSERT INTO Orders VALUES (2, 2, 2);"
+      ],
+      "tests": [
+        {
+          "queries": [
+            {
+              "columns": ["OrderID", "Customer", "Product"],
+              "expected": [
+                [1, "Alice", "Keyboard"],
+                [2, "Bob", "Monitor"]
+              ]
+            }
+          ]
+        }
+      ]
+    }
 }

@@ -34,3 +34,22 @@ body {
 [data-theme] {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+@layer components {
+  .sql-keyword {
+    @apply text-primary font-semibold;
+  }
+
+  .sql-type {
+    @apply text-success font-medium;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.4);
+  border-radius: 4px;
+}

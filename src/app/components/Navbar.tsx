@@ -4,6 +4,9 @@ import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import ToggleTheme from './ToggleTheme';
 import { useIsMobile } from "@/hooks/useIsMobile"
+
+type RefreshObject = { success: boolean, message: string, count: number, error?: string }
+
 import { QuestionKey } from '../types/QuestionKey';
 export default function Navbar({ testKeys }: { testKeys: QuestionKey[] }) {
     const [refreshing, setRefreshing] = useState(false);
@@ -61,8 +64,8 @@ export default function Navbar({ testKeys }: { testKeys: QuestionKey[] }) {
         try {
 
             const res = await fetch('/api/refresh-tests/js', { method: 'POST' });
-            const data = await res.json();
-            alert(data.success ? '✅ JS Test cache refreshed.' : `❌ Failed: ${data.error}`);
+            const data: RefreshObject = await res.json();
+            alert(data.success ? `✅ Refreshed ${data.count} tests, ${data.message}` : `❌ Failed: ${data.error}`);
         } catch (err) {
             alert('❌ Error: ' + err);
         }
@@ -79,8 +82,8 @@ export default function Navbar({ testKeys }: { testKeys: QuestionKey[] }) {
         try {
 
             const res = await fetch('/api/refresh-tests/sql', { method: 'POST' });
-            const data = await res.json();
-            alert(data.success ? '✅ SQL Test cache refreshed.' : `❌ Failed: ${data.error}`);
+            const data: RefreshObject = await res.json();
+            alert(data.success ? `✅ Refreshed ${data.count} tests, ${data.message}` : `❌ Failed: ${data.error}`);
         } catch (err) {
             alert('❌ Error: ' + err);
         }
@@ -91,7 +94,7 @@ export default function Navbar({ testKeys }: { testKeys: QuestionKey[] }) {
         .sort((a, b) => a.slug.localeCompare(b.slug));
 
     return (
-        <div className="navbar bg-base-100 shadow gap-2 sm:gap-4 px-2 sm:px-4">
+        <div className="navbar sticky top-0 z-50 bg-base-100 shadow gap-2 sm:gap-4 px-2 sm:px-4">
             <div className="flex-1">
                 <Link
                     href="/"

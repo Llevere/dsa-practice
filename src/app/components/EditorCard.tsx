@@ -30,9 +30,9 @@ export default function SharedEditorCard({
     return (
         <div className="card bg-base-200 shadow-md p-6 space-y-5 border border-base-300">
             <h3 className="text-lg font-semibold text-primary">{label}</h3>
-            <div className="rounded border border-base-300 overflow-hidden">
+            <div className="rounded border border-base-300 overflow-x-auto">
                 <MonacoEditor
-                    className="max-h-[35vh] h-[250px]"
+                    className="w-full min-w-[500px] max-h-[35vh] h-[250px]"
                     defaultLanguage={language}
                     value={code}
                     onChange={(value) => onCodeChange(value ?? "")}

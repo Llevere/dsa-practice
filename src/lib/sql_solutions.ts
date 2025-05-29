@@ -16,4 +16,26 @@ export const defaultSqlSolutions: SqlSolutionMap = {
       `),
     },
   ],
+  customersWhoNeverOrder: [
+    {
+      label: "Select all customers who have never ordered",
+      code: dedent(`
+        SELECT name as "Customers" from Customers LEFT JOIN Orders ON Orders.customerId = Customers.id WHERE Orders.customerId IS NULL;
+        `),
+    },
+  ],
+  customerProductOrders: [
+    {
+      label:
+        "Select a column from 3 different tables (Testing my sqlite backend)",
+      code: dedent(`SELECT
+  Orders.id AS OrderID,
+  Customers.name AS Customer,
+  Products.name AS Product
+FROM Orders
+JOIN Customers ON Orders.customerId = Customers.id
+JOIN Products ON Orders.productId = Products.id;
+`),
+    },
+  ],
 };

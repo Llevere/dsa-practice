@@ -1,12 +1,14 @@
 import { NextResponse } from "next/server";
-import { getJSTestsJson } from "@/lib/loadTests";
+import { getJSTestsJson, getTypedTestKeys } from "@/lib/loadTests";
 
 export async function POST() {
   try {
     const tests = await getJSTestsJson(true);
+    //Reset merged keys
+    await getTypedTestKeys(true);
     return NextResponse.json({
       success: true,
-      message: "Tests refreshed",
+      message: "Tests refreshed + merged keys refreshed",
       count: Object.keys(tests).length,
     });
   } catch (error) {

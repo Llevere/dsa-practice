@@ -8,6 +8,28 @@ export type SolutionObject = {
 export type SolutionMap = Record<string, SolutionObject[]>;
 
 export const defaultSolutions: SolutionMap = {
+  excelSheetColumnString: [
+    {
+      label: "While loop",
+      code: dedent(`
+/**
+ * @param {string} columnNum
+ * @return {number}
+ */
+var solve = function (columnNum) {
+let result = "";
+
+while (columnNum) {
+  columnNum--;
+  const char = String.fromCharCode((columnNum % 26) + 65);
+  result = char + result;
+  columnNum = Math.floor(columnNum / 26);
+}
+
+return result;
+};`),
+    },
+  ],
   excelSheetColumnNumber: [
     {
       label: "Reduce",

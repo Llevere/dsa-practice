@@ -6,12 +6,12 @@ import { useSearchParams } from 'next/navigation';
 import Toast from './Toast';
 import { QuestionKey } from '../types/QuestionKey';
 
-const LanguageBadge = ({ type }: { type: 'js' | 'sql' }) => {
+const LanguageBadge = ({ type }: { type: 'js' | 'sqlite' }) => {
     const base = 'badge border-none transition';
     return type === 'js' ? (
         <span className={`${base} bg-[#f7df1e] text-black hover:brightness-110`}>JS</span>
     ) : (
-        <span className={`${base} bg-[#336791] text-white hover:brightness-110`}>SQL</span>
+        <span className={`${base} bg-[#336791] text-white hover:brightness-110`}>SQLite</span>
     );
 };
 
@@ -90,8 +90,11 @@ export default function HomeContent({ data }: { data: QuestionKey[] }) {
                         </div>
                     </div>
 
-                    <div className="text-center pt-2">
-                        <h2 className="text-base font-medium mb-2 text-base-content">Legend</h2>
+                    <div className="pt-2 w-full flex justify-center flex-col">
+                        <h2 className="text-base font-medium text-base-content text-center">Legend</h2>
+                        <h3 className=" p-3 my-2 rounded-lg bg-base-200 text-sm text-base-content max-w-xl mx-auto text-center">
+                            Leetcode problems were written in MySQL, but converted to SQLite for this websites testing purposes.
+                        </h3>
 
                         <div className="flex gap-4 justify-center items-center">
                             <div className="flex items-center gap-2">
@@ -99,8 +102,8 @@ export default function HomeContent({ data }: { data: QuestionKey[] }) {
                                 <span className="text-sm text-base-content/80">JavaScript</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <LanguageBadge type="sql" />
-                                <span className="text-sm text-base-content/80">SQL</span>
+                                <LanguageBadge type="sqlite" />
+                                <span className="text-sm text-base-content/80">SQLite</span>
                             </div>
                         </div>
                     </div>
