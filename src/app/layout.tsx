@@ -23,21 +23,22 @@ export const metadata: Metadata = {
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const testKeys: QuestionKey[] = await getTypedTestKeys();
   return (
-    <html lang="en" suppressHydrationWarning >
+    <html lang="en" data-theme="light">
       <head>
         <script
           dangerouslySetInnerHTML={{
             __html: `
-            (function() {
-              try {
-                const storedTheme = localStorage.getItem('theme');
-                const theme = storedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'business' : 'light');
-                document.documentElement.setAttribute('data-theme', theme);
-              } catch(e) {}
-            })();
-            `,
+      (function() {
+        try {
+          const stored = localStorage.getItem('theme');
+          const preferred = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'business' : 'light');
+          document.documentElement.setAttribute('data-theme', preferred);
+        } catch(e) {}
+      })();
+    `,
           }}
         />
+
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeInitializer />

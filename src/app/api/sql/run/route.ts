@@ -38,7 +38,6 @@ export async function POST(req: NextRequest) {
         try {
           const stmt = db.prepare(code);
           const columnMeta = stmt.columns();
-          console.warn("ColumnMeta: ", columnMeta);
           const actualColumns = columnMeta.map((c) => c.name.toLowerCase());
           const expectedColumns = query.columns.map((c) => c.toLowerCase());
 
