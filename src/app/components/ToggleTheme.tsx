@@ -29,14 +29,15 @@ export default function ToggleTheme() {
     };
 
     return (
-        <button
-            className={`btn font-medium btn-sm transition-colors duration-150 ${isDark ? 'btn-outline btn-warning' : 'btn-outline btn-neutral'}`}
-            onClick={toggleTheme}
-            aria-label="Toggle Theme"
-        >
-            {isMobile
-                ? isDark ? '🌞' : '🌙'
-                : isDark ? '🌞 Light' : '🌙 Dark'}
-        </button>
+        isMobile ? null :
+            <button
+                className={`btn font-medium btn-sm transition-colors duration-150 ${isDark ? 'btn-outline btn-warning' : 'btn-outline btn-neutral'}`}
+                onClick={toggleTheme}
+                aria-label="Toggle Theme"
+            >
+                {isMobile
+                    ? isDark ? '🌞' : '🌙'
+                    : isDark ? '🌞 Light' : '🌙 Dark'}
+            </button>
     );
 }
