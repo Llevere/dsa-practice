@@ -11,15 +11,15 @@ type Props = {
 
 export default function DescriptionSection({ question }: Props) {
     return (
-        <div className="lg:col-span-1 space-y-4 text-base-content">
+        <div className="lg:col-span-1 space-y-4 text-base-content h-full flex-1">
             <CollapseCard title="Problem Description" defaultOpen={true}>
-                <div className="max-h-[60vh] overflow-y-auto pr-2">
+                <div className="pr-2">
                     <p className="text-sm opacity-90 leading-relaxed whitespace-pre-line mb-3">
                         {question.description ?? "No description available (Working on implementing SQL functionality at the moment)"}
                     </p>
 
                     {"schema" in question && question.schema?.length > 0 && (
-                        <div className="border border-white rounded-lg">
+                        <div className="border border-white rounded-lg flex-1">
                             <CollapseCard title="Schema" defaultOpen={true} titleSize="text-sm">
                                 <SchemaDisplay
                                     tables={parseSchemaStatements(question.schema)}

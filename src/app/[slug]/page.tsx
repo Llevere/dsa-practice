@@ -28,15 +28,16 @@ export default async function QuestionPage({
     }
 
     return (
-        <div className="h-screen bg-base-100 flex flex-col">
-            <div className="flex-1 overflow-hidden">
-                <div className="w-[90%] mx-auto h-full grid grid-cols-1 lg:grid-cols-3 gap-6">
-
-                    <div className="lg:col-span-1 overflow-y-auto  h-full">
-                        <DescriptionSection question={question} />
+        <div className="min-h-screen bg-base-100 flex flex-col">
+            <div className="flex flex-col my-2 flex-1">
+                <div className="w-[90%] mx-auto flex flex-col lg:flex-row gap-6 flex-1">
+                    <div className="lg:w-1/3 overflow-y-auto max-h-[60vh] lg:max-h-none">
+                        <div className="flex-1">
+                            <DescriptionSection question={question} />
+                        </div>
                     </div>
 
-                    <div className="lg:col-span-2 overflow-y-auto h-full space-y-6">
+                    <div className="lg:w-2/3 h-full">
                         {type === "js" && "spreadable" in question && (
                             <JSContainer
                                 tests={question.tests.slice(0, 3)}
@@ -57,6 +58,7 @@ export default async function QuestionPage({
                     </div>
                 </div>
             </div>
+
         </div>
     );
 }

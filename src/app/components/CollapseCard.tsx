@@ -18,7 +18,7 @@ export default function CollapseCard({
     const [isOpen, setIsOpen] = useState(defaultOpen);
 
     return (
-        <div className="bg-base-200 border border-base-300 rounded-lg transition-all duration-300 overflow-y-auto">
+        <div className="bg-base-200 border border-base-300 rounded-lg transition-all duration-300">
             <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="w-full flex items-center justify-between p-4 text-lg font-semibold text-base-content focus:outline-none"
@@ -33,9 +33,9 @@ export default function CollapseCard({
             </button>
 
             <div
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
-                    }`}
+                className={`transition-all duration-300 ease-in-out ${isOpen ? 'opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}
             >
+
                 <div className="p-4 text-sm opacity-90 leading-relaxed text-base-content">
                     {children}
                 </div>
