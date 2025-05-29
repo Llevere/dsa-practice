@@ -11,11 +11,22 @@ export default function ToggleTheme() {
 
     useEffect(() => {
         const stored = localStorage.getItem('theme') as 'light' | 'business' | null;
-        const initial = stored ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'business' : 'light');
+
+        let initial: 'light' | 'business';
+
+        if (stored) {
+            initial = stored;
+        } else {
+            initial = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'business' : 'light';
+            localStorage.setItem('theme', initial);
+        }
+
         setTheme(initial);
         document.documentElement.setAttribute('data-theme', initial);
         setMounted(true);
     }, []);
+
+
 
     const toggleTheme = () => {
         const newTheme = theme === 'light' ? 'business' : 'light';

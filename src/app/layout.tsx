@@ -17,12 +17,27 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: 'DSA Practice',
-  description: 'Practice common data structure and algorithm problems interactively.',
+  description: 'App to showcase what I have done in leetcode with tests the code can run against.',
 };
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const testKeys: QuestionKey[] = await getTypedTestKeys();
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning data-theme="business">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            (function() {
+              try {
+                const storedTheme = localStorage.getItem('theme');
+                const theme = storedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'business' : 'light');
+                document.documentElement.setAttribute('data-theme', theme);
+              } catch(e) {}
+            })();
+            `,
+          }}
+        />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Navbar testKeys={testKeys} />
         {children}
