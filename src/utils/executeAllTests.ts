@@ -1,6 +1,7 @@
-import { runSingleTest } from "./executeTestInVm";
+import { runSingleTest, prepareExecutionEnv } from "./executeTestInVm";
+import { deepEqual } from "./deepEqual";
 
-type TestCase = { given: unknown; expected: unknown };
+type TestCase = { given: unknown; expected: unknown; type?: string };
 type QuestionResult = {
   input: unknown;
   expected: unknown;
@@ -16,14 +17,15 @@ export function runAllTests(
   tests: TestCase[],
   spreadable: boolean
 ): QuestionResult[] {
+  const type = tests[0]?.type || "default";
+  const { getResult } = prepareExecutionEnv(code, type, spreadable);
+
   return tests.map((test) => {
     const { result, logs, error, timeMs } = runSingleTest(
-      code,
-      test,
-      spreadable
+      getResult,
+      test.given
     );
-    const pass =
-      !error && JSON.stringify(result) === JSON.stringify(test.expected);
+    const pass = !error && deepEqual(result, test.expected);
     return {
       input: test.given,
       expected: test.expected,
